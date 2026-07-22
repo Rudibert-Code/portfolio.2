@@ -1,7 +1,6 @@
 @use './variables' as *;
 
 .column{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +9,44 @@
 
 .btn{
     cursor: pointer;
+}
+
+.icon{
+    &_mail{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/mail-default.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/mail-hover.png');
+            transition: 0.5s;
+        }
+    }
+    
+    &_git{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/git-default.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/git-hover.png');
+            transition: 0.5s;
+        }
+    }
+
+    &_linkedin{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/linkedin-default.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/linkedin-hover.png');
+            transition: 0.5s;
+        }
+    }
 }
 
 .arrow{

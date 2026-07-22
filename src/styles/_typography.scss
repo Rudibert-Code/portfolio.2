@@ -14,6 +14,15 @@
   font-style: normal;
 }
 
+h1{
+    font-family: 'Anta';
+    font-size: 4.8rem;
+    color: $secondary;
+    margin: 0 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
 h2{
     font-family: 'Anta';
     font-size: 2.5rem;
@@ -29,4 +38,10 @@ p{
     color: $secondary;
     margin: 0;
     margin-bottom: 8px;
+}
+
+.alt-font{
+    &_p{
+      font-size: 3.2rem;  
+    }
 }
