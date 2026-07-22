@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  quickLink(link:string){
+    window.open(link);
+  }
+}
