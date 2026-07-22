@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+.column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.arrow{
+    width: 38px;
+    height: 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f464a00;
+    border-radius: 50px;
+    border-color: $primary;
+    border-width: 2px;
+ 
+    &:hover{
+        background-color: #3F464A;
+        transition: 0.5s;
+    }
+}
