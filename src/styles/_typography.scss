@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+@font-face {
+  font-family: 'Anta';
+  src: url('../../public/assets/fonts/Anta-Regular.ttf');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('../../public/assets/fonts/JosefinSans-Regular.ttf');
+  font-weight: 100 900;
+  font-style: normal;
+}
