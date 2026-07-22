@@ -44,4 +44,11 @@ p{
     &_p{
       font-size: 3.2rem;  
     }
+    &_b-w{
+        color: $background;
+        &:hover{
+            color: $secondary;
+            transition: 0.2s;
+        }
+    }
 }
