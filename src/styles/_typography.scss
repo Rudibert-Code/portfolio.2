@@ -78,3 +78,9 @@ span{
         color: #89BCD9;
     }
 }
+
+@media (max-width:1100px){
+    span{
+        text-align: center; 
+    }
+}
