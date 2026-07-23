@@ -23,6 +23,14 @@ nav{
     align-items: center;
 }
 
+.nav-language{
+    width: 50px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .marked{
     background-image: url('/assets/img/nav-marker.png');
     background-repeat: no-repeat;

@@ -1,11 +1,15 @@
 <nav class="only_desktop">
     <img src="assets/logo-dark.png" alt="">
-    <div (click)="markElement('why-me')" class="btn nav-text" id="why-me"> <p class="alt-font_b-w">Why Me</p> </div>
-    <div (click)="markElement('skills')" class="btn nav-text" id="skills"> <p class="alt-font_b-w">Skills</p> </div>
-    <div (click)="markElement('projects')" class="btn nav-text" id="projects"> <p class="alt-font_b-w" id="projects">Projects</p> </div>
-    <div (click)="markElement('contacts')" class="btn nav-text" id="contacts"> <p class="alt-font_b-w">Contact</p> </div>
-    <div>
-        <p>DE</p>
-        <p>EN</p>
+    <div (click)="markElement('why-me','nav')" class="btn nav-text" id="why-me"> <p class="alt-font_b-w">Why Me</p> </div>
+    <div (click)="markElement('skills','nav')" class="btn nav-text" id="skills"> <p class="alt-font_b-w">Skills</p> </div>
+    <div (click)="markElement('projects','nav')" class="btn nav-text" id="projects"> <p class="alt-font_b-w" id="projects">Projects</p> </div>
+    <div (click)="markElement('contacts','nav')" class="btn nav-text" id="contacts"> <p class="alt-font_b-w">Contact</p> </div>
+    <div class="row">
+        <div (click)="markElement('DE','lan')" class="btn nav-language" id="why-me" id="DE">
+            <p class="alt-font_b-w">DE</p>
+        </div>
+        <div (click)="markElement('EN','lan')" class="btn nav-language" id="why-me" id="EN">
+            <p class="alt-font_b-w">EN</p>
+        </div>
     </div>
 </nav>
