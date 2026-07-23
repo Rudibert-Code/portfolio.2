@@ -1,30 +1,41 @@
-<section class="container" id="#my-skills">
+<section id="#my-skills">
     <h2 class="color_primary">My skills</h2>
-    <div class="icon_wrapper">
-        @for (skills of mySkills; track $index) {
-            <div class="column" [style.gap.px]="16" [style.margin.px]="8">
-                <img src=" {{ skills.img }} " alt="">
-                <p class="color_primary only_desktop"> {{ skills.name }} </p>
+    <div class="orientation">
+        <div class="icon_wrapper">
+            @for (skills of mySkills; track $index) {
+                <div class="column" [style.gap.px]="16" [style.margin.px]="8">
+                    <img class="response-ani" src=" {{ skills.img }} " alt="">
+                    <p class="color_primary only_desktop"> {{ skills.name }} </p>
+                </div>
+            }
+        </div>
+        <!-- Mobile view -->
+        <div class="column only_mobile">
+            <h3>What am I currently learning</h3>
+            <div class="container" [style.gap.px]="16">
+                <span class="special-paragraph alignment_left">What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning?</span>
+                <div class="row bg">
+                    @for (learn of currentlyLearning; track $index) {
+                        <div class="column" [style.gap.px]="16" [style.margin.px]="8">
+                            <img class="size_mobile" src=" {{ learn.img }} " alt="">
+                            <p class="size_mobile_font"> {{ learn.name }} </p>
+                        </div>
+                    }
+                </div>
             </div>
-        }
-    </div>
-    <!-- Mobile view -->
-    <div class="column only_mobile">
-        <h3>What am I currently learning</h3>
-        <div class="container" [style.gap.px]="16">
-            <span class="special-paragraph alignment_left">What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning?</span>
-            <div class="row bg alignment_right">
+        </div>
+        <!-- Desktop view -->
+        <div class="bg to-learn_wrapper">
+            <p>I'm currently learning</p>
+            <div class="row">
                 @for (learn of currentlyLearning; track $index) {
                     <div class="column" [style.gap.px]="16" [style.margin.px]="24">
                         <img class="size_mobile" src=" {{ learn.img }} " alt="">
                         <p class="size_mobile_font"> {{ learn.name }} </p>
-                    </div>
+                    </div> 
                 }
             </div>
+            <span class="special-paragraph">What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning?</span>
         </div>
-    </div>
-    <!-- Desktop view -->
-    <div>
-
     </div>
 </section>

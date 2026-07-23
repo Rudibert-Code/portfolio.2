@@ -4,14 +4,15 @@
 
 .container{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .component_footer{
-    width: 72%;
+    width: 100%;
+    max-width: 880px;
     display: flex;
     justify-content: end;
     align-items: center;

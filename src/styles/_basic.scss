@@ -126,7 +126,7 @@ button{
 }
 
 .bg{
-    height: 175px;
+    height: 320px;
     width: auto;
     background-image: url(/assets/img/interface-bg.png);
     background-repeat: no-repeat;
@@ -152,4 +152,8 @@ button{
     .paragraph{
         width: 80%;
     } 
+
+    .bg{
+        height: 175px;
+    }
 }
