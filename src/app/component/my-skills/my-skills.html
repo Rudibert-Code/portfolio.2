@@ -1,4 +1,18 @@
 <section id="#my-skills">
     <h2 class="color_primary">My skills</h2>
-    <div></div>
+    <div class="icon_wrapper">
+        @for (skills of mySkills; track $index) {
+            <div class="column" [style.gap.px]="16" [style.margin.px]="8">
+                <img src=" {{ skills.img }} " alt="">
+                <p class="color_primary only_desktop"> {{ skills.name }} </p>
+            </div>
+        }
+    </div>
+    <div>
+        <h3>What am I currently learning</h3>
+        <div>
+            <span></span>
+            <div></div>
+        </div>
+    </div>
 </section>
