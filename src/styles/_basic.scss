@@ -122,7 +122,20 @@ button{
 }
 
 .paragraph{
-    width: 40%;
+    width: 50%;
+}
+
+.bg{
+    height: 175px;
+    width: auto;
+    background-image: url(/assets/img/interface-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &:hover{
+        background-image: url(/assets/img/interface-bg2.png);
+        transition: 0.5s;
+    }
 }
 
 @media (max-width:1100px){

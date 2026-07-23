@@ -42,4 +42,14 @@ export class MySkills {
       name:'Scrum'
     },
   ]
+  currentlyLearning:Skills[]=[
+    {
+      img:'assets/icons/skill_typescript.png',
+      name:'TypeScript'
+    },
+    {
+      img:'assets/icons/skill_angular.png',
+      name:'Angular'
+    },
+  ]
 }
