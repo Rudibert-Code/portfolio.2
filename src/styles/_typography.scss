@@ -32,9 +32,27 @@ h2{
     text-align: center;
 }
 
+a{
+    cursor: pointer;
+    font-family: 'JosefinSans';
+    font-size: 1.6rem;
+    color: $secondary;
+    margin: 0;
+    margin-bottom: 8px; 
+    text-decoration-line: none;  
+}
+
 p{
     font-family: 'JosefinSans';
     font-size: 1.6rem;
+    color: $secondary;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+span{
+    font-family: 'JosefinSans';
+    font-size: 1.4rem;
     color: $secondary;
     margin: 0;
     margin-bottom: 8px;
@@ -52,5 +70,11 @@ p{
             color: $secondary;
             transition: 0.2s;
         }
+    }
+}
+
+.color{
+    &_primary{
+        color: #89BCD9;
     }
 }
