@@ -29,7 +29,7 @@ export class MyProjects {
       name:'Jump N Run',
       tech:' Javascript, HTML, CSS, Github',
       duration:' 3 Weeks',
-      img:'',
+      img:'assets/img/img_space-blast.png',
       about:'',
       link:'',
       git:''
@@ -43,7 +43,7 @@ export class MyProjects {
       name:'Jump N Run',
       tech:' Javascript, HTML, CSS, Github',
       duration:' 3 Weeks',
-      img:'',
+      img:'assets/img/img_space-blast.png',
       about:'',
       link:'',
       git:''
@@ -53,7 +53,7 @@ export class MyProjects {
       name:'Pokédex',
       tech:' Javascript, HTML, CSS, Github',
       duration:' 3 Weeks',
-      img:'',
+      img:'assets/img/img_pokedex.jpg',
       about:'',
       link:'',
       git:''
@@ -63,7 +63,7 @@ export class MyProjects {
       name:'Join',
       tech:' Angular, Typescript, HTML, SCSS, Github, Supabase',
       duration:' 5 Weeks',
-      img:'',
+      img:'assets/img/img_join.png',
       about:'',
       link:'',
       git:''
