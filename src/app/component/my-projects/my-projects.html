@@ -1,27 +1,29 @@
 <section class="special-section" id="#my-projetcs">
     <h2 class="color_primary">My projects</h2>
-    <div class="position-lables" id="projects"> 
-        @for (projects of myProjects; track $index) {
-            <p class="btn shape_lable" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}"> {{ projects.number }}. Project</p>
-        }  
-    </div>
-    <div class="shape_bg column" id="project-pg">
-        <div>
+    <div class="max-size_v">
+        <div class="position-lables" id="projects"> 
+            @for (projects of myProjects; track $index) {
+                <p class="btn shape_lable" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}"> {{ projects.number }}. Project</p>
+            }  
+        </div>
+        <div class="shape_bg column" id="project-pg">
             <div>
-                <h3>  {{ currentProject[0].name }} </h3>
                 <div>
-                    <p>Technologies: </p><p id="project-techlist"> {{ currentProject[0].tech }} </p>
-                </div>
-                <div>
-                    <p>Duration: </p><p id="project-duration"> {{ currentProject[0].duration }} </p>
+                    <h3>  {{ currentProject[0].name }} </h3>
+                    <div>
+                        <p>Technologies: </p><p id="project-techlist"> {{ currentProject[0].tech }} </p>
+                    </div>
+                    <div>
+                        <p>Duration: </p><p id="project-duration"> {{ currentProject[0].duration }} </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <img src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
-        <div id="project-descriptions"></div>
-        <div>
-            <a href=" {{ currentProject[0].link }} " target="_blank" id="live-test">Live test</a>
-            <a href=" {{ currentProject[0].git }} " target="_blank" id="live-github">GitHub</a>
+            <img src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
+            <div id="project-descriptions"></div>
+            <div>
+                <a href=" {{ currentProject[0].link }} " target="_blank" id="live-test">Live test</a>
+                <a href=" {{ currentProject[0].git }} " target="_blank" id="live-github">GitHub</a>
+            </div>
         </div>
     </div>
     {{ firstMark() }}
