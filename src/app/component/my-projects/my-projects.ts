@@ -13,6 +13,8 @@ interface Project{
   git:string
 }
 
+let isLoaded:boolean = false;
+
 @Component({
   selector: 'app-my-projects',
   imports: [],
@@ -20,6 +22,7 @@ interface Project{
   styleUrl: './my-projects.scss',
 })
 export class MyProjects {
+  // Starting project + details
   currentProject:Project[]=[
     {
       number:1,
@@ -33,6 +36,7 @@ export class MyProjects {
     },
   ]
 
+  // List of projects + details
   myProjects:Project[]=[
     {
       number:1,
@@ -72,6 +76,17 @@ export class MyProjects {
     this.markProjectLable(project.number);
   }
 
+  firstMark(){
+    setTimeout(() => {
+      if (isLoaded == false) {
+        isLoaded = true;
+        this.markProjectLable(1); 
+      } else{
+        return
+      }
+    },0)
+  }
+
   markProjectLable(number:number){
     this.clearProjectLable();
     let targetLable = document.getElementById("pro"+number) as HTMLParagraphElement;
@@ -91,10 +106,14 @@ export class MyProjects {
   adjustProjectBG(number:number){
     let bg = document.getElementById('project-pg') as HTMLDialogElement;
     if (number != 1) {
-      bg.classList.add('shape_bg-alt'); 
+      if(number == this.myProjects.length && window.innerWidth <= 400){
+        bg.classList.add('shape_bg-alt-back');
+      } else{
+        bg.classList.add('shape_bg-alt-neutral');
+      } 
     } else{
-      bg.classList.remove('shape_bg-alt'); 
+      bg.classList.remove('shape_bg-alt-neutral'); 
+      bg.classList.remove('shape_bg-alt-back');
     }
   }
-
 }

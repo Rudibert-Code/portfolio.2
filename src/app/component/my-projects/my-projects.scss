@@ -31,9 +31,14 @@
         border-radius: 0 50px 50px 50px;
         background-color: $overlay;
     }
-    &_bg-alt{
+    &_bg-alt-neutral{
         width: 100%;
         border-radius: 50px;
+        background-color: $overlay;    
+    }
+    &_bg-alt-back{
+        width: 100%;
+        border-radius: 50px 0 50px 50px;
         background-color: $overlay;    
     }
     &_lable{
@@ -44,6 +49,36 @@
         margin: 0;
         &:hover{
             color: $secondary;
+        }
+    }
+}
+
+@media (min-width:1100px){
+    .shape{
+        &_bg{
+            width: 100%;
+            border-radius: 0;
+            background-color: $overlay;
+        }
+        &_bg-alt-neutral{
+            width: 100%;
+            border-radius: 0;
+            background-color: $overlay;    
+        }
+        &_bg-alt-back{
+            width: 100%;
+            border-radius: 0;
+            background-color: $overlay;    
+        }
+        &_lable{
+            border-radius: 20px 20px 0 0;
+            background-color: $background;
+            color: $primary;
+            padding: 24px;
+            margin: 0;
+            &:hover{
+                color: $secondary;
+            }
         }
     }
 }
