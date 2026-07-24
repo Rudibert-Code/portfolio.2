@@ -27,8 +27,8 @@ export class MyProjects {
     {
       number:1,
       name:'Jump N Run',
-      tech:'Javascript, HTML, CSS, Github',
-      duration:'3 Weeks',
+      tech:' Javascript, HTML, CSS, Github',
+      duration:' 3 Weeks',
       img:'',
       about:'',
       link:'',
@@ -41,8 +41,8 @@ export class MyProjects {
     {
       number:1,
       name:'Jump N Run',
-      tech:'Javascript, HTML, CSS, Github',
-      duration:'3 Weeks',
+      tech:' Javascript, HTML, CSS, Github',
+      duration:' 3 Weeks',
       img:'',
       about:'',
       link:'',
@@ -51,8 +51,8 @@ export class MyProjects {
     {
       number:2,
       name:'Pokédex',
-      tech:'Javascript, HTML, CSS, Github',
-      duration:'3 Weeks',
+      tech:' Javascript, HTML, CSS, Github',
+      duration:' 3 Weeks',
       img:'',
       about:'',
       link:'',
@@ -61,8 +61,8 @@ export class MyProjects {
     {
       number:3,
       name:'Join',
-      tech:'Angular, Typescript, HTML, SCSS, Github, Supabase',
-      duration:'5 Weeks',
+      tech:' Angular, Typescript, HTML, SCSS, Github, Supabase',
+      duration:' 5 Weeks',
       img:'',
       about:'',
       link:'',

@@ -20,6 +20,17 @@ section{
     }
 }
 
+nav{
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    position:sticky;
+    top: 0;
+    z-index: 100;
+}
+
 button{
     border-radius: 50px;
     padding: 8px 16px;
@@ -150,7 +161,7 @@ button{
         align-items: center;
     }
     &_v{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

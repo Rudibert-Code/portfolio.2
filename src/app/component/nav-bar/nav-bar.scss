@@ -2,17 +2,13 @@
 @use '../../../styles/typography';
 @use '../../../styles/basic';
 
-.nav{
+.nav-container{
     width: 100%;
+    max-width: 1440px;
     height: 104px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $primary;
-    position:sticky;
-    top: 0;
-    right: 0;
-    z-index: 100;
 }
 
 .nav-text{
