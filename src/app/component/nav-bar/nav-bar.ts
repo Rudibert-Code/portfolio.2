@@ -35,6 +35,7 @@ export class NavBar {
     e4.classList.remove('marked');
   }
 
+  // löscht Markierung auf Sprach-Toggle ...
   clearLanguage(){
     let l1 = document.getElementById('DE') as HTMLParagraphElement;
     let l2 = document.getElementById('EN') as HTMLParagraphElement;
