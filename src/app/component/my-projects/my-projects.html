@@ -7,22 +7,20 @@
             }  
         </div>
         <div class="shape_bg column" id="project-bg">
-            <div>
-                <div>
-                    <h3>  {{ currentProject[0].name }} </h3>
-                    <div class="row">
-                        <p>Technologies: </p><p id="project-techlist"> {{ currentProject[0].tech }} </p>
-                    </div>
-                    <div class="row">
-                        <p>Duration: </p><p id="project-duration"> {{ currentProject[0].duration }} </p>
-                    </div>
+            <div class="project-techlist">
+                <h2 class="color_primary">  {{ currentProject[0].name }} </h2>
+                <div class="row only_mobile">
+                    <p class="small-font">Technologies: </p><p class="small-font" id="project-techlist"> {{ currentProject[0].tech }} </p>
+                </div>
+                <div class="row only_mobile">
+                    <p class="small-font">Duration: </p><p class="small-font" id="project-duration"> {{ currentProject[0].duration }} </p>
                 </div>
             </div>
             <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
             <div id="project-descriptions"></div>
-            <div>
-                <a href=" {{ currentProject[0].link }} " target="_blank" id="live-test">Live test</a>
-                <a href=" {{ currentProject[0].git }} " target="_blank" id="live-github">GitHub</a>
+            <div class="row" [style.gap.px]="32">
+                <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
+                <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
             </div>
         </div>
     </div>

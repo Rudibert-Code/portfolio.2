@@ -31,8 +31,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
       about:'',
-      link:'',
-      git:''
+      link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
+      git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
   ]
 
@@ -45,8 +45,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
       about:'',
-      link:'',
-      git:''
+      link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
+      git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
     {
       number:2,
@@ -55,8 +55,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_pokedex.jpg',
       about:'',
-      link:'',
-      git:''
+      link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
+      git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
     {
       number:3,
@@ -132,5 +132,9 @@ export class MyProjects {
       bg.classList.remove('shape_bg-alt-neutral'); 
       bg.classList.remove('shape_bg-alt-back');
     }
+  }
+
+  openWindow(link:string){
+    window.open(link);
   }
 }
