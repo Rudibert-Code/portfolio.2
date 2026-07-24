@@ -92,4 +92,57 @@ span{
     span{
         text-align: center; 
     }
+
+    h1{
+        font-family: 'Anta';
+        font-size: 3.2rem;
+        color: $secondary;
+        margin: 0 24px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    
+    h2{
+        font-family: 'Anta';
+        font-size: 2rem;
+        color: $secondary;
+        margin: 0 24px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    
+    h3{
+        font-family: 'Anta';
+        font-size: 1.4rem;
+        color: $primary;
+        margin: 0 24px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    
+    a{
+        cursor: pointer;
+        font-family: 'JosefinSans';
+        font-size: 1.2rem;
+        color: $secondary;
+        margin: 0;
+        margin-bottom: 8px; 
+        text-decoration-line: none;  
+    }
+    
+    p{
+        font-family: 'JosefinSans';
+        font-size: 1.2rem;
+        color: $secondary;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    
+    span{
+        font-family: 'JosefinSans';
+        font-size: 1.2rem;
+        color: $secondary;
+        margin: 0;
+        margin-bottom: 8px;
+    }
 }

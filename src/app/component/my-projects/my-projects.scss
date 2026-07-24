@@ -1,3 +1,49 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/typography';
 @use '../../../styles/basic';
+
+.special-section{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0;
+    padding: 0;
+    padding-top: 62px;
+    padding-bottom: 32px;
+    >h2{
+        padding-bottom: 24px;
+    }
+}
+
+.position-lables{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.shape{
+    &_bg{
+        width: 100%;
+        border-radius: 0 50px 50px 50px;
+        background-color: $overlay;
+    }
+    &_bg-alt{
+        width: 100%;
+        border-radius: 50px;
+        background-color: $overlay;    
+    }
+    &_lable{
+        border-radius: 20px 20px 0 0;
+        background-color: $background;
+        color: $primary;
+        padding: 24px;
+        margin: 0;
+        &:hover{
+            color: $secondary;
+        }
+    }
+}

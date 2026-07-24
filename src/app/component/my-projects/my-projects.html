@@ -1,27 +1,32 @@
-<section>
-    <h2>My projects</h2>
-    <div id="projects">
-        <!-- x. Project -->       
+<section class="special-section" id="#my-projetcs">
+    <h2 class="color_primary">My projects</h2>
+    <div class="position-lables" id="projects">
+        <!-- x. Project -->   
+        @for (projects of myProjects; track $index) {
+            <p class="btn shape_lable" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}"> {{ projects.number }}. Project</p>
+        }    
     </div>
-    <div>
+    <div class="shape_bg column" id="project-pg">
         <div>
-            <!-- Project names --> 
-            <h3 id="project-title"></h3>
             <div>
-                <!-- Technologie list -->
-                <p>Technologies: </p><p id="project-techlist"></p>
-            </div>
-            <div>
-                <!-- Duration -->
-                <p>Duration: </p><p id="project-duration"></p>
+                <!-- Project names --> 
+                <h3>  {{ currentProject[0].name }} </h3>
+                <div>
+                    <!-- Technologie list -->
+                    <p>Technologies: </p><p id="project-techlist"> {{ currentProject[0].tech }} </p>
+                </div>
+                <div>
+                    <!-- Duration -->
+                    <p>Duration: </p><p id="project-duration"> {{ currentProject[0].duration }} </p>
+                </div>
             </div>
         </div>
-    </div>
-    <img src="" alt="" id="pjroject-img">
-    <!-- Project descriptions -->
-    <div id="project-descriptions"></div>
-    <div>
-        <a href="" target="_blank" id="live-test">Live test</a>
-        <a href="" target="_blank" id="live-github">GitHub</a>
+        <img src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
+        <!-- Project descriptions -->
+        <div id="project-descriptions"></div>
+        <div>
+            <a href=" {{ currentProject[0].link }} " target="_blank" id="live-test">Live test</a>
+            <a href=" {{ currentProject[0].git }} " target="_blank" id="live-github">GitHub</a>
+        </div>
     </div>
 </section>
