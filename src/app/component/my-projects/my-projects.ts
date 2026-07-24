@@ -92,7 +92,10 @@ export class MyProjects {
     let targetLable = document.getElementById("pro"+number) as HTMLParagraphElement;
     targetLable.style.backgroundColor = "#2D3840";
     targetLable.style.color = "#F8F5EC";
-    this.adjustProjectBG(number);
+    
+    if (window.innerWidth <= 1440) {
+      this.adjustProjectBG(number);
+    }
   }
 
   clearProjectLable(){
@@ -103,12 +106,26 @@ export class MyProjects {
     }
   }
 
+  calculateCombinedLableWidth(){
+    let combinedWidth:number = 0;
+    for (let index = 0; index < this.myProjects.length; index++) {
+      let currentLable = document.getElementById("pro"+this.myProjects[index].number) as HTMLParagraphElement;
+      combinedWidth += Number(currentLable.offsetWidth + 48);
+    }
+    if (combinedWidth >= window.innerWidth-24 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   adjustProjectBG(number:number){
-    let bg = document.getElementById('project-pg') as HTMLDialogElement;
+    let bg = document.getElementById('project-bg') as HTMLDialogElement;
     if (number != 1) {
-      if(number == this.myProjects.length && window.innerWidth <= 400){
+      if(number == this.myProjects.length && window.innerWidth <= 400 && this.calculateCombinedLableWidth()){
         bg.classList.add('shape_bg-alt-back');
       } else{
+        bg.classList.remove('shape_bg-alt-back');
         bg.classList.add('shape_bg-alt-neutral');
       } 
     } else{
