@@ -4,9 +4,10 @@ interface Project{
   number:number,
   name:string,
   tech:string,
+  techIMG:string[],
   duration:string,
   img:string,
-  about:string,
+  about?:string,
   how?:string,
   exp?:string,
   link:string,
@@ -28,9 +29,15 @@ export class MyProjects {
       number:1,
       name:'Jump N Run',
       tech:' Javascript, HTML, CSS, Github',
+      techIMG:[
+        'assets/icons/skill_javascript.png',
+        'assets/icons/skill_html.png',
+        'assets/icons/skill_css.png',
+        'assets/icons/skill_git.png'
+      ],
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about:'',
+      about:'About...',
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -42,9 +49,15 @@ export class MyProjects {
       number:1,
       name:'Jump N Run',
       tech:' Javascript, HTML, CSS, Github',
+      techIMG:[
+        'assets/icons/skill_javascript.png',
+        'assets/icons/skill_html.png',
+        'assets/icons/skill_css.png',
+        'assets/icons/skill_git.png'
+      ],
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about:'',
+      about:'About...',
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -52,19 +65,33 @@ export class MyProjects {
       number:2,
       name:'Pokédex',
       tech:' Javascript, HTML, CSS, Github',
+      techIMG:[
+        'assets/icons/skill_javascript.png',
+        'assets/icons/skill_html.png',
+        'assets/icons/skill_css.png',
+        'assets/icons/skill_git.png'
+      ],
       duration:' 3 Weeks',
       img:'assets/img/img_pokedex.jpg',
-      about:'',
+      about:'About...',
       link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
       git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
     {
       number:3,
       name:'Join',
-      tech:' Angular, Typescript, HTML, SCSS, Github, Supabase',
+      tech:' Angular, Typescript, HTML, CSS, Github, Supabase',
+      techIMG:[
+        'assets/icons/skill_angular.png',
+        'assets/icons/skill_typescript.png',
+        'assets/icons/skill_html.png',
+        'assets/icons/skill_css.png',
+        'assets/icons/skill_git.png',
+        'assets/icons/skill_supabase.png'
+      ],
       duration:' 5 Weeks',
       img:'assets/img/img_join.png',
-      about:'',
+      about:'About...',
       link:'',
       git:''
     },
@@ -76,7 +103,7 @@ export class MyProjects {
     this.markProjectLable(project.number);
   }
 
-  firstMark(){
+  initFunction(){
     setTimeout(() => {
       if (isLoaded == false) {
         isLoaded = true;
@@ -84,7 +111,16 @@ export class MyProjects {
       } else{
         return
       }
+      this.setProjectTechList();
     },0)
+  }
+
+  setProjectTechList(){
+    let projectTechListMobile = document.getElementById('project-techlist-desktop') as HTMLDivElement;
+
+    for (let index = 0; index < this.currentProject[0].techIMG.length; index++) {
+      projectTechListMobile.innerHTML += `<img src="${this.currentProject[0].techIMG[index]}" alt="">`
+    }
   }
 
   markProjectLable(number:number){
