@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class NavBar {
   // markiert Navigationselement ...
   markElement(id:string,type:string){
-    let targetElement = document.getElementById(id) as HTMLParagraphElement;
+    let targetElement = document.getElementById(id) as HTMLAnchorElement;
     switch (type) {
       case 'nav':
         this.clearNavigation();
@@ -25,10 +25,10 @@ export class NavBar {
   
   // löscht Markierung auf Navigationselement ...
   clearNavigation(){
-    let e1 = document.getElementById('why-me') as HTMLParagraphElement;
-    let e2 = document.getElementById('skills') as HTMLParagraphElement;
-    let e3 = document.getElementById('projects') as HTMLParagraphElement;
-    let e4 = document.getElementById('contacts') as HTMLParagraphElement;
+    let e1 = document.getElementById('nav-why-me') as HTMLParagraphElement;
+    let e2 = document.getElementById('nav-skills') as HTMLParagraphElement;
+    let e3 = document.getElementById('nav-projects') as HTMLParagraphElement;
+    let e4 = document.getElementById('nav-contacts') as HTMLParagraphElement;
     e1.classList.remove('marked');
     e2.classList.remove('marked');
     e3.classList.remove('marked');
