@@ -1,5 +1,7 @@
 <section id="recommendations">
-    <p class="color_primary">Need a teamplayer? Here’s what my colleagues say about me</p>
+    <h2 class="color_primary only_mobile">Need a teamplayer?</h2>
+    <p class="only_mobile" [style.padding-bottom.px]="24">Here’s what my colleagues say about me</p>
+    <p class="color_primary only_desktop">Need a teamplayer? Here’s what my colleagues say about me</p>
     <div class="recommendation_list" id="recommendation-list">
         @for (reco of myRecommendation; track $index) {
             <div class="recommendation_base bg" [style.padding-inline.px]="24">
