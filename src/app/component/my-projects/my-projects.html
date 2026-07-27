@@ -24,6 +24,10 @@
                         </div>
                     </div>
                     <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
+                    <div class="row only_desktop" [style.gap.px]="32">
+                        <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
+                        <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
+                    </div>
                 </div>
                 <div class="project-descriptions" id="project-descriptions">
                     <div class="project-details">
@@ -49,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" [style.gap.px]="32">
+            <div class="row only_mobile" [style.gap.px]="32">
                 <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
                 <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
             </div>
