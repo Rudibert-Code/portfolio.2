@@ -3,8 +3,8 @@
     <div class="max-size_v">
         <div class="position-lables" id="projects"> 
             @for (projects of myProjects; track $index) {
-                <p class="btn shape_lable only_mobile" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}"> {{ projects.number }}. Project</p>
-                <p class="btn shape_lable only_desktop" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}"> {{ projects.name }}</p>
+                <p class="btn shape_lable only_mobile" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}_mobile"> {{ projects.number }}. Project</p>
+                <p class="btn shape_lable only_desktop" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}_desktop"> {{ projects.name }}</p>
             }  
         </div>
         <div class="shape_bg column" id="project-bg">

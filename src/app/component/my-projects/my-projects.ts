@@ -127,9 +127,12 @@ export class MyProjects {
 
   markProjectLable(number:number){
     this.clearProjectLable();
-    let targetLable = document.getElementById("pro"+number) as HTMLParagraphElement;
-    targetLable.style.backgroundColor = "#2D3840";
-    targetLable.style.color = "#F8F5EC";
+    let targetLableMobile = document.getElementById("pro"+number+"_mobile") as HTMLParagraphElement;
+    let targetLableDesktop = document.getElementById("pro"+number+"_desktop") as HTMLParagraphElement;
+    targetLableMobile.style.backgroundColor = "#2D3840";
+    targetLableDesktop.style.backgroundColor = "#2D3840";
+    targetLableMobile.style.color = "#F8F5EC";
+    targetLableDesktop.style.color = "#F8F5EC";
     
     if (window.innerWidth <= 1440) {
       this.adjustProjectBG(number);
@@ -138,9 +141,12 @@ export class MyProjects {
 
   clearProjectLable(){
     for (let index = 0; index < this.myProjects.length; index++) {
-      let targetLable = document.getElementById("pro"+this.myProjects[index].number) as HTMLParagraphElement;
-      targetLable.style.backgroundColor = "#262E34";
-      targetLable.style.color = "#89BCD9";
+      let targetLableMobile = document.getElementById("pro"+this.myProjects[index].number+"_mobile") as HTMLParagraphElement;
+      let targetLableDesktop = document.getElementById("pro"+this.myProjects[index].number+"_desktop") as HTMLParagraphElement;
+      targetLableMobile.style.backgroundColor = "#262E34";
+      targetLableDesktop.style.backgroundColor = "#262E34";
+      targetLableMobile.style.color = "#89BCD9";
+      targetLableDesktop.style.color = "#89BCD9";
     }
   }
 
