@@ -19,6 +19,7 @@
 
 .project-base{
     width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,10 +125,20 @@
 }
 
 @media (min-width:1100px){
+    .project-img{
+        width: 75%;
+        height: fit-content;
+        border-radius: 24px;
+    }
+
     .project-base{
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
+    }
+
+    .project-details{
+        padding-left: 64px;
     }
 
     .project-techlist{
