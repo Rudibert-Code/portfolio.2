@@ -1,15 +1,13 @@
 <section id="recommendations">
     <p class="color_primary">Need a teamplayer? Here’s what my colleagues say about me</p>
     <div class="recommendation_list" id="recommendation-list">
-        <!--@for (reco of myRecommendation; track $index) {}-->
-        <div class="column bg">
-            <p>NAME</p>
-            <div class="row">
-                <p>Projects: </p>
-                <p class="color_primary">PROJECT</p>
+        @for (reco of myRecommendation; track $index) {
+            <div class="recommendation_base bg" [style.padding-inline.px]="24">
+                <p> {{ reco.name }} </p>
+                <p>Projects:  <span class="color_primary"> {{ reco.project }} </span></p>
+                <span class="text-wrapper"> {{ reco.text }} </span>
+                <a class="color_primary" href=" {{ reco.linkedin }} ">Linked In Profile</a>
             </div>
-            <span class="text-wrapper">reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco reco </span>
-            <a class="color_primary" href="">Linked In Profile</a>
-        </div>
+        }
     </div>
 </section>

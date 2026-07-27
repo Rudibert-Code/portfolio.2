@@ -3,9 +3,34 @@
 @use '../../../styles/basic';
 
 .text-wrapper{
-    width: 380px;
-    height: 380px;
+    width: 240px;
+    height: 124px;
     display: flex;
     overflow-y: scroll;
     flex-wrap: wrap;
+    font-size: 1rem;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.recommendation{
+    &_base{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    &_list{
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
 }
