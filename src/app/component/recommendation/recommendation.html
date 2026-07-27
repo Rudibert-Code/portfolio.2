@@ -6,7 +6,7 @@
                 <p> {{ reco.name }} </p>
                 <p>Projects:  <span class="color_primary"> {{ reco.project }} </span></p>
                 <span class="text-wrapper"> {{ reco.text }} </span>
-                <a class="color_primary" href=" {{ reco.linkedin }} ">Linked In Profile</a>
+                <a class="color_primary" (click)="header.quickLink( reco.linkedin)">Linked In Profile</a>
             </div>
         }
     </div>

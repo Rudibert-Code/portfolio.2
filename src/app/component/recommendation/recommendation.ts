@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Header } from "../header/header";
 
 interface Recommendations{
   name:string,
@@ -14,6 +15,8 @@ interface Recommendations{
   styleUrl: './recommendation.scss',
 })
 export class Recommendation {
+  header = inject(Header);
+
   myRecommendation:Recommendations[]=[
     {
       name:"Felix Winkler",
@@ -25,7 +28,7 @@ export class Recommendation {
       name:"Waldemar Chorow",
       project:" Kochwelt",
       text:'"Björn ist ein echter Gewinn für jedes Entwicklerteam! Wir haben zusammen die Rezepte-Plattform Kochwelt entwickelt, und Björn hat von Anfang an dafür gesorgt, dass der Teamgeist an erster Stelle steht. Durch seine offene, kommunikative und enthusiastische Art hat er eine tolle Arbeitsatmosphäre geschaffen und das Projekt fachlich wie menschlich extrem bereichert. Er hatte immer das klare Ziel vor Augen, die Aufgaben strukturiert und mit einem sehr guten Ergebnis abzuschließen. Dabei war er ausnahmslos freundlich und stand jedem immer hilfsbereit zur Seite. Die Zusammenarbeit mit ihm hat großen Spaß gemacht. Eine klare Empfehlung, jederzeit wieder gerne."',
-      linkedin:"https://www.linkedin.com/in/waldemar-chorow-11460a31b/"
+      linkedin:"https://www.linkedin.com/in/waldemar-chorow-11460a31b/?skipRedirect=true"
     },
   ]
 }
