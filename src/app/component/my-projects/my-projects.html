@@ -8,21 +8,24 @@
             }  
         </div>
         <div class="shape_bg column" id="project-bg">
-            <div class="project-techlist">
-                <h2 class="color_primary only_mobile">  {{ currentProject[0].name }} </h2>
-                <div class="row">
-                    <div class="column only_desktop">
-                        <h3 class="only_desktop">Technologies</h3>
-                        <div class="project-techlist_desktop" id="project-techlist-desktop"></div>
+            <div class="project-base">
+                <div class="column" [style.width.%]="100">
+                    <div class="project-techlist">
+                        <h2 class="color_primary only_mobile">  {{ currentProject[0].name }} </h2>
+                        <div class="row">
+                            <div class="column only_desktop">
+                                <h3 class="only_desktop">Technologies</h3>
+                                <div class="project-techlist_desktop" id="project-techlist-desktop"></div>
+                            </div>
+                            <p class="small-font only_mobile">Technologies: </p><p class="small-font only_mobile" id="project-techlist"> {{ currentProject[0].tech }} </p>
+                        </div>
+                        <div class="row only_mobile">
+                            <p class="small-font">Duration: </p><p class="small-font" id="project-duration"> {{ currentProject[0].duration }} </p>
+                        </div>
                     </div>
-                    <p class="small-font only_mobile">Technologies: </p><p class="small-font only_mobile" id="project-techlist"> {{ currentProject[0].tech }} </p>
+                    <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
                 </div>
-                <div class="row only_mobile">
-                    <p class="small-font">Duration: </p><p class="small-font" id="project-duration"> {{ currentProject[0].duration }} </p>
-                </div>
-            </div>
-            <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
-            <div class="project-descriptions" id="project-descriptions">
+                <div class="project-descriptions" id="project-descriptions">
                     <div class="project-details">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
@@ -44,6 +47,7 @@
                         </div>
                         <span> {{ currentProject[0].exp }} </span>
                     </div>
+                </div>
             </div>
             <div class="row" [style.gap.px]="32">
                 <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
