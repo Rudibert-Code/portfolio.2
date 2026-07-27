@@ -14,7 +14,7 @@
                         <h2 class="color_primary only_mobile">  {{ currentProject[0].name }} </h2>
                         <div class="row">
                             <div class="column only_desktop">
-                                <h3 class="only_desktop">Technologies</h3>
+                                <p class="only_desktop" [style.padding-bottom.px]="16">Technologies</p>
                                 <div class="project-techlist_desktop" id="project-techlist-desktop"></div>
                             </div>
                             <p class="small-font only_mobile">Technologies: </p><p class="small-font only_mobile" id="project-techlist"> {{ currentProject[0].tech }} </p>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
-                    <div class="row only_desktop" [style.gap.px]="32" [style.padding-top.px]="24">
+                    <div class="row only_desktop" [style.gap.px]="32" [style.padding-top.px]="32">
                         <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
                         <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
                     </div>
