@@ -101,6 +101,7 @@ export class MyProjects {
     this.currentProject=[];
     this.currentProject.push(project);
     this.markProjectLable(project.number);
+    this.setProjectTechList();
   }
 
   initFunction(){
@@ -117,6 +118,7 @@ export class MyProjects {
 
   setProjectTechList(){
     let projectTechListMobile = document.getElementById('project-techlist-desktop') as HTMLDivElement;
+    projectTechListMobile.innerHTML = '';
 
     for (let index = 0; index < this.currentProject[0].techIMG.length; index++) {
       projectTechListMobile.innerHTML += `<img src="${this.currentProject[0].techIMG[index]}" alt="">`
