@@ -17,8 +17,19 @@
     <p class="color_primary only_mobile">Let us work together!</p>
     <div class="input">
         <div class="input_base">
-            <input class="input_area" type="text" value="     Your name">
-            <input class="input_area" type="text" value="     Your email">
+            <div class="input" id="contact_name">
+                <!--<p class="only_desktop">Your name</p>-->
+                <input class="input_area" type="text" value="     Your name" id="input-name">
+            </div>
+            <div class="input" id="contact_email">
+                <!--<p class="only_desktop">Your email</p>-->
+                <input class="input_area" type="text" value="     Your email" id="input-email">
+            </div>
+        </div>
+        <textarea class="input_area" [style.border-radius.px]="25" type="text" rows="4" id="input-text">     Your message...</textarea>
+        <div>
+            <div class="checkbox"></div>
+            <p>I've read the <a class="color_primary">privacy policy</a> and agree to the processing of my data as outlined.</p>
         </div>
     </div>
 </section>
