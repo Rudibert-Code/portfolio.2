@@ -8,14 +8,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
+        gap: 16px;
     }
     &_details{
-        width: 100%;
         display: flex;
         justify-content: start;
         align-items: center;
         padding-inline: 16px;
+        gap: 16px;
     }
     &_text{
         width: 100%;
@@ -26,6 +27,43 @@
         >span{
             width: 40%;
             height: auto;
+        }
+    }
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_base{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &_area{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3f464a00;
+        border-radius: 50px;
+        border-color: $primary;
+        border-width: 2px;
+        padding: 16px 8px;
+        outline: $primary solid 2px;
+        font-family: JosefinSans;
+        font-size: 1.2rem;
+    
+        &:active{
+            background-color: #3F464A;
+            transition: 0.5s;
         }
     }
 }
@@ -42,6 +80,41 @@
         }
         &_text{
             flex-direction: column-reverse;
+            >span{
+                width: calc(100% - 64px);
+            }
         }
-    }   
+    } 
+    
+.input{
+    &_base{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_area{
+        width: calc(100% - 64px);
+        max-width: 524px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3f464a00;
+        border-radius: 50px;
+        border-color: $primary;
+        border-width: 2px;
+        padding: 16px 8px;
+        outline: $primary solid 2px;
+        font-family: JosefinSans;
+        font-size: 1.2rem;
+    
+        &:active{
+            background-color: #3F464A;
+            transition: 0.5s;
+        }
+    }
+}
 }
