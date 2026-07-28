@@ -27,14 +27,14 @@
         <div class="input_base">
             <div class="input" id="contact_name">
                 <!--<p class="only_desktop">Your name</p>-->
-                <input class="input_area" type="text" value="     Your name" id="input-name">
+                <input (keydown)="resetInputState('input-name')" class="input_area" type="text" value="     Your name" id="input-name">
             </div>
             <div class="input" id="contact_email">
                 <!--<p class="only_desktop">Your email</p>-->
-                <input class="input_area" type="text" value="     Your email" id="input-email">
+                <input (keydown)="resetInputState('input-email')" class="input_area" type="text" value="     Your email" id="input-email">
             </div>
         </div>
-        <textarea class="input_area" [style.border-radius.px]="25" type="text" rows="4" id="input-text">     Your message...</textarea>
+        <textarea (keydown)="resetInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" rows="4" id="input-text">     Your message...</textarea>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
             <p class="visible_normal">I've read the <a class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>

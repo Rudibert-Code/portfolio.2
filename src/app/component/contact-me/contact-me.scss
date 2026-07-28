@@ -102,6 +102,28 @@
             transition: 0.5s;
         }
     }
+
+    &_error{
+        cursor: pointer;
+        width: calc(100% - 128px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3f464a00;
+        border-radius: 50px;
+        border-color: $error;
+        border-width: 2px;
+        padding: 16px 8px;
+        outline: $error solid 2px;
+        font-family: JosefinSans;
+        font-size: 1.2rem;
+        color: $error;
+    
+        &:active{
+            background-color: #4a3f3f;
+            transition: 0.5s;
+        }
+    }
 }
 
 .policy{
