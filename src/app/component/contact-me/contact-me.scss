@@ -41,7 +41,8 @@
 }
 
 .input{
-    width: 100%;
+    
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +55,6 @@
 
     &_base{
         width: 100%;
-        max-width: 1440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,12 +83,69 @@
     }
 }
 
+.policy{
+    width: calc(100% - 220px);
+    max-width: 1440px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    >p{
+        margin: 0;
+    }
+    >a{
+        margin: 0;
+    }
+}
+
+.checkbox{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/icons/check-box.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:hover{
+        background-image: url(/assets/icons/check-box_hover.png);
+        transition: 0.5s;
+    }
+}
+
+.clicked{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/icons/check-box_clicked.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/icons/check-box_error.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.visible{
+    &_small{
+        display: none;
+    }
+}
+
+@media(min-width:340px){
+    .input{
+        width: 100%;
+    }
+}
+
 @media(min-width:1100px){
     .input{
         >textarea{
             width: calc(100% - 220px);
         }
     }
+
     #contact{
         &_name{
             align-items: end;
@@ -102,6 +159,24 @@
 }
 
 @media(max-width:1100px){
+    .policy{
+        width: calc(100% - 110px);
+        max-width: 524px;
+        gap: 16px;
+    }
+
+    .checkbox{
+        width: 32px;
+    }
+
+    .clicked{
+        width: 32px;
+    }
+
+    .error{
+        width: 32px;
+    }
+
     .contact{
         &_contacts{
             width: 100%;
@@ -134,5 +209,32 @@
             max-width: 524px;
         }
      
+    }
+}
+
+@media(max-width:633px){
+    .checkbox{
+        width: 24px;
+    }
+
+    .clicked{
+        width: 24px;
+    }
+
+    .error{
+        width: 24px;
+    }
+
+    .policy{
+        width: calc(100% - 48px);
+    }
+
+    .visible{
+        &_normal{
+            display: none;
+        }
+        &_small{
+            display: flex;
+        }
     }
 }
