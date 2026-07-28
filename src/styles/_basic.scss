@@ -156,6 +156,21 @@ input{
     }
 }
 
+.button-base-blocked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    border-radius: 50px;
+    border-color: #3F464A;
+    border-width: 2px;
+    padding: 16px 8px;
+    outline: #3F464A solid 2px;
+    font-family: JosefinSans;
+    font-size: 1.2rem;
+    color: #3F464A;
+}
+
 .only{
     &_mobile{
         display: none;

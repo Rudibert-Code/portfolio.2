@@ -12,4 +12,7 @@ export class ContactMe {
     checkbox.classList.toggle("checkbox");
     checkbox.classList.toggle(state);
   }
+
+  sendEmail(){
+  }
 }

@@ -1,5 +1,13 @@
 <section id="contact-me">
-    <h2 class="color_primary">Contact me</h2>
+    <div class="contact_title">
+        <div class="only_desktop" [style.width.px]="54"></div>
+        <h2 class="color_primary">Contact me</h2>
+        <a class="button-base size_arrow only_desktop" [style.margin-bottom.px]="32" href="#header">
+            <svg width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.10138 4.58504L2.18916 10.8881C1.80741 11.2362 1.22333 11.2362 0.841574 10.8881L0.325962 10.4179C-0.108978 10.0213 -0.108978 9.33665 0.325962 8.94005L9.84183 0.262848C10.2236 -0.0852585 10.8077 -0.0852585 11.1894 0.262848L20.7053 8.94005C21.1402 9.33665 21.1402 10.0213 20.7053 10.4179L20.1897 10.8881C19.8079 11.2362 19.2238 11.2362 18.8421 10.8881L11.9299 4.58504L11.9299 48.6484C11.9299 49.2007 11.4822 49.6484 10.9299 49.6484H10.1014C9.54909 49.6484 9.10138 49.2007 9.10138 48.6484L9.10138 4.58504Z" fill="#89BCD9"/>
+            </svg>
+        </a>
+    </div>
     <div class="contact_text">
         <!-- Text to encurage people to message you -->
         <span>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </span>
@@ -32,5 +40,13 @@
             <p class="visible_normal">I've read the <a class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
             <a class="color_primary visible_small">privacy policy</a>
         </div>
+        <div (click)="sendEmail()" class="contact_footer">
+            <a class="button-base-blocked size_button" id="send-button">Send</a>
+        </div>
+        <a class="button-base size_arrow only_mobile" [style.margin-bottom.px]="32" href="#header">
+            <svg width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.10138 4.58504L2.18916 10.8881C1.80741 11.2362 1.22333 11.2362 0.841574 10.8881L0.325962 10.4179C-0.108978 10.0213 -0.108978 9.33665 0.325962 8.94005L9.84183 0.262848C10.2236 -0.0852585 10.8077 -0.0852585 11.1894 0.262848L20.7053 8.94005C21.1402 9.33665 21.1402 10.0213 20.7053 10.4179L20.1897 10.8881C19.8079 11.2362 19.2238 11.2362 18.8421 10.8881L11.9299 4.58504L11.9299 48.6484C11.9299 49.2007 11.4822 49.6484 10.9299 49.6484H10.1014C9.54909 49.6484 9.10138 49.2007 9.10138 48.6484L9.10138 4.58504Z" fill="#89BCD9"/>
+            </svg>
+        </a>
     </div>
 </section>
