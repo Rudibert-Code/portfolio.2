@@ -5,10 +5,11 @@ import { WhyMe } from '../../component/why-me/why-me';
 import { MySkills } from '../../component/my-skills/my-skills';
 import { MyProjects } from '../../component/my-projects/my-projects';
 import { Recommendation } from "../../component/recommendation/recommendation";
+import { ContactMe } from "../../component/contact-me/contact-me";
 
 @Component({
   selector: 'app-main',
-  imports: [Header, NavBar, WhyMe, MySkills, MyProjects, Recommendation],
+  imports: [Header, NavBar, WhyMe, MySkills, MyProjects, Recommendation, ContactMe],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
