@@ -23,18 +23,16 @@
         </div>
     </div>
     <p class="color_primary only_mobile">Let us work together!</p>
-    <div class="input">
+    <form class="input" action="mailto:bjoernsagmeisterdev@gmail.com" method="post" enctype="text/plain" id="form">
         <div class="input_base">
             <div class="input" id="contact_name">
-                <!--<p class="only_desktop">Your name</p>-->
-                <input (click)="clearInput('input-name')" (keyup)="checkInputState('input-name')" class="input_area" type="text" value="Your name" id="input-name">
+                <input (keyup)="checkInputState('input-name')" class="input_area" type="text" placeholder="Your name" name="name" value="" id="input-name">
             </div>
             <div class="input" id="contact_email">
-                <!--<p class="only_desktop">Your email</p>-->
-                <input (click)="clearInput('input-email')" (keyup)="checkInputState('input-email')" class="input_area" type="text" value="Your email" id="input-email">
+                <input (keyup)="checkInputState('input-email')" class="input_area" type="text" placeholder="Your email" value="" id="input-email">
             </div>
         </div>
-        <textarea  (click)="clearInput('input-text')" (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" rows="4" id="input-text">Your message...</textarea>
+        <textarea (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder="Your message..." rows="4" id="input-text"></textarea>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
             <p class="visible_normal">I've read the <a class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
@@ -48,5 +46,5 @@
                 <path d="M9.10138 4.58504L2.18916 10.8881C1.80741 11.2362 1.22333 11.2362 0.841574 10.8881L0.325962 10.4179C-0.108978 10.0213 -0.108978 9.33665 0.325962 8.94005L9.84183 0.262848C10.2236 -0.0852585 10.8077 -0.0852585 11.1894 0.262848L20.7053 8.94005C21.1402 9.33665 21.1402 10.0213 20.7053 10.4179L20.1897 10.8881C19.8079 11.2362 19.2238 11.2362 18.8421 10.8881L11.9299 4.58504L11.9299 48.6484C11.9299 49.2007 11.4822 49.6484 10.9299 49.6484H10.1014C9.54909 49.6484 9.10138 49.2007 9.10138 48.6484L9.10138 4.58504Z" fill="#89BCD9"/>
             </svg>
         </a>
-    </div>
+    </form>
 </section>

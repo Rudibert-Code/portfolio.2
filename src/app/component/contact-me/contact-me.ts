@@ -25,7 +25,8 @@ export class ContactMe {
 
   sendEmail(){
     if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
-      console.log(this.newUser[0].name, this.newUser[0].email, this.newUser[0].message)
+      let form = document.getElementById('form') as HTMLFormElement;
+      form.submit();
     } else{
       this.markIncompletion();
     }
@@ -124,10 +125,5 @@ export class ContactMe {
     }
 
     this.checkFormCompletion()
-  }
-
-  clearInput(ID:string){
-    let targetInputArea = document.getElementById(ID) as HTMLInputElement;
-    targetInputArea.value = "";
   }
 }
