@@ -1,3 +1,37 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/typography';
 @use '../../../styles/basic';
+
+.footer-container{
+    width: calc(100% - 220px);
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal-notice{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 16px;
+    >a{
+        color: $overlay;
+        &:hover{
+            color: $secondary;
+            transition: 0.2s;
+        }
+    }
+    >p{
+        color: $overlay;
+    }
+}
+
+@media(max-width:1100px){
+    .legal-notice{
+        width: calc(100% - 64px);
+        max-width: 524px;
+        flex-direction: row;
+    }
+}

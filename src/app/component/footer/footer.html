@@ -1,12 +1,27 @@
-<footer>
-    <img src="assets/logo-dark.png" alt="">
+<footer class="only_mobile">
+    <img src="assets/logo-dark.png" [style.padding-top.px]="16" alt="">
     <div class="row" [style.gap.px]="24">
         <a class="no_margin icon_mail-footer" href="#contact-me"></a>
         <div class="btn icon_git-footer" (click)="header.quickLink('https://github.com/Rudibert-Code')"></div>
         <div class="btn icon_linkedin-footer" (click)="header.quickLink('https://www.linkedin.com/in/bj%C3%B6rn-sagmeister-358558a5/')"></div>
     </div>
-    <div class="row" [style.gap.px]="24">
+    <div class="legal-notice">
         <a>Legal notice</a>
         <p>© Claudia Fohrer 2024</p>
+    </div>
+</footer>
+
+<footer class="only_desktop">
+    <div class="footer-container">
+        <div class="legal-notice">
+            <a>Legal notice</a>
+            <p>© Claudia Fohrer 2024</p>
+        </div>
+        <img src="assets/logo-dark.png" [style.padding-top.px]="16" alt="">
+        <div class="row" [style.gap.px]="24">
+            <a class="no_margin icon_mail-footer" href="#contact-me"></a>
+            <div class="btn icon_git-footer" (click)="header.quickLink('https://github.com/Rudibert-Code')"></div>
+            <div class="btn icon_linkedin-footer" (click)="header.quickLink('https://www.linkedin.com/in/bj%C3%B6rn-sagmeister-358558a5/')"></div>
+        </div>
     </div>
 </footer>

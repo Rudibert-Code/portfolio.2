@@ -3,7 +3,7 @@
 @use '../../../styles/basic';
 
 .nav-container{
-    width: 100%;
+    width: calc(100% - 220px);
     max-width: 1440px;
     height: 104px;
     display: flex;
