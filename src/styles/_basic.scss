@@ -88,6 +88,18 @@ input{
             transition: 0.5s;
         }
     }
+
+    &_mail-footer{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/mail_footer.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/mail_footer_hover.png');
+            transition: 0.5s;
+        }
+    }
     
     &_git{
         width: 32px;
@@ -101,6 +113,18 @@ input{
         }
     }
 
+    &_git-footer{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/git_footer.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/git_footer_hover.png');
+            transition: 0.5s;
+        }
+    }
+
     &_linkedin{
         width: 32px;
         aspect-ratio: 1/1;
@@ -109,6 +133,18 @@ input{
         background-size: contain;
         &:hover{
             background-image: url('/assets/icons/linkedin-hover.png');
+            transition: 0.5s;
+        }
+    }
+
+    &_linkedin-footer{
+        width: 32px;
+        aspect-ratio: 1/1;
+        background-image: url('/assets/icons/linkedin_footer.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover{
+            background-image: url('/assets/icons/linkedin_footer_hover.png');
             transition: 0.5s;
         }
     }
@@ -252,5 +288,10 @@ input{
 
     .bg{
         height: 175px;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 24px;
     }
 }

@@ -13,8 +13,4 @@ export class Header {
   quickLink(link:string){
     window.open(link);
   }
-
-  sendEmail(){
-    
-  }
 }
