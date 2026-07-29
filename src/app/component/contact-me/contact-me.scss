@@ -98,9 +98,10 @@
         color: #3F464A;
         text-indent: 24px;
     
-        &:active{
+        &:focus{
             background-color: #3F464A;
             transition: 0.5s;
+            color: $secondary;
         }
     }
 

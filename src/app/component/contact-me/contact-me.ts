@@ -39,15 +39,15 @@ export class ContactMe {
 
     if (this.newUser[0].name == "") {
       userName.classList.add("input_error");
-      userName.value="     Your name is required";  
+      userName.value="Your name is required";  
     }
     if (this.newUser[0].email == "") {
       userEmail.classList.add("input_error");
-      userEmail.value="     Your email is required";  
+      userEmail.value="Your email is required";  
     }
     if (this.newUser[0].message == "") {
       userMessage.classList.add("input_error");
-      userMessage.value="     Your message is required";  
+      userMessage.value="Your message is required";  
     }
     if (this.newUser[0].checkbox == false) {
       checkboxState.classList.add("error");  
@@ -124,5 +124,10 @@ export class ContactMe {
     }
 
     this.checkFormCompletion()
+  }
+
+  clearInput(ID:string){
+    let targetInputArea = document.getElementById(ID) as HTMLInputElement;
+    targetInputArea.value = "";
   }
 }
