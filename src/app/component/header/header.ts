@@ -1,5 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 
+const overlay = document.getElementById('overlay') as HTMLDialogElement;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -12,5 +14,13 @@ import { Component, Injectable } from '@angular/core';
 export class Header {
   quickLink(link:string){
     window.open(link);
+  }
+
+  openDialog(){
+    overlay?.show();
+  }
+
+  closeDialog(){
+    overlay?.close();
   }
 }
