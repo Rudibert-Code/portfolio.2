@@ -39,4 +39,13 @@ export class Header {
       popupOpen = true;
     }
   }
+
+  markedLanguage(ID:string){
+    const DE = document.getElementById('overlay-DE') as HTMLDivElement;
+    const EN = document.getElementById('overlay-EN') as HTMLDivElement;
+    let selected = document.getElementById(ID) as HTMLDivElement;
+    DE.classList.remove('marked');
+    EN.classList.remove('marked');
+    selected.classList.add('marked');
+  }
 }

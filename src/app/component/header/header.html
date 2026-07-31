@@ -8,10 +8,10 @@
             <a class="nav-text alt-font_b-w" href="#my-projetcs" id="overlay-projects">Projects</a>
             <a class="nav-text alt-font_b-w" href="#contact-me" id="overlay-contacts">Contact</a>
             <div class="row" [style.gap.px]="16">
-                <div class="btn nav-language marked" id="overlay-DE">
+                <div class="btn nav-language marked" (click)=" markedLanguage('overlay-DE')" id="overlay-DE">
                     <p class="alt-font_b-w">DE</p>
                 </div>
-                <div class="btn nav-language" id="overlay-EN">
+                <div class="btn nav-language" (click)=" markedLanguage('overlay-EN')" id="overlay-EN">
                     <p class="alt-font_b-w">EN</p>
                 </div>
             </div>

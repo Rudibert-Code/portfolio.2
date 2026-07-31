@@ -36,7 +36,7 @@
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
             <p class="visible_normal">I've read the <a [routerLink]="['/privacy']" class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
-            <a class="color_primary visible_small">privacy policy</a>
+            <a class="color_primary visible_small" [routerLink]="['/privacy']">privacy policy</a>
         </div>
         <div (click)="sendEmail()" class="contact_footer">
             <a class="button-base-blocked size_button" id="send-button">Send</a>

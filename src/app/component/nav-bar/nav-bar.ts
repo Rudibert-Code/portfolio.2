@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
+
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-nav-bar',
   imports: [],
