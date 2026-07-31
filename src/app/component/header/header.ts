@@ -23,6 +23,8 @@ export class Header {
 
   @HostListener('document:click', ['$event'])
   closeMenu(event: MouseEvent){
+    this.ngOnInit();
+
     const overlay = document.getElementById('overlay') as HTMLDivElement;
     const menu = document.getElementById('burger-menu') as HTMLImageElement;
     const clickedElement = event.target as HTMLElement;
