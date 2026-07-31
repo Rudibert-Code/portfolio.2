@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 interface User{
   name:string,
@@ -9,7 +10,7 @@ interface User{
 
 @Component({
   selector: 'app-contact-me',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })

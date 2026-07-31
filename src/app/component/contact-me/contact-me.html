@@ -35,7 +35,7 @@
         <textarea (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder="Your message..." rows="4" id="input-text"></textarea>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
-            <p class="visible_normal">I've read the <a class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
+            <p class="visible_normal">I've read the <a [routerLink]="['privacy']" class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
             <a class="color_primary visible_small">privacy policy</a>
         </div>
         <div (click)="sendEmail()" class="contact_footer">
