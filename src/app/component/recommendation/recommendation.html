@@ -1,12 +1,12 @@
 <section id="recommendations">
-    <h2 class="color_primary only_mobile">Need a teamplayer?</h2>
-    <p class="only_mobile" [style.padding-bottom.px]="24">Here’s what my colleagues say about me</p>
-    <p class="color_primary only_desktop">Need a teamplayer? Here’s what my colleagues say about me</p>
+    <h2 class="color_primary only_mobile"> {{ languageCache.recommendations[0] }} </h2>
+    <p class="only_mobile" [style.padding-bottom.px]="24"> {{ languageCache.recommendations[1] }} </p>
+    <p class="color_primary only_desktop"> {{ languageCache.recommendations[0] }}   {{ languageCache.recommendations[1] }} </p>
     <div class="recommendation_list" id="recommendation-list">
         @for (reco of myRecommendation; track $index) {
             <div class="recommendation_base bg" [style.padding-inline.px]="24">
                 <p> {{ reco.name }} </p>
-                <p>Projects:  <span class="color_primary"> {{ reco.project }} </span></p>
+                <p>{{ languageCache.projetcs[0] }}:  <span class="color_primary"> {{ reco.project }} </span></p>
                 <span class="text-wrapper"> {{ reco.text }} </span>
                 <a class="color_primary" (click)="header.quickLink( reco.linkedin)">Linked In Profile</a>
             </div>

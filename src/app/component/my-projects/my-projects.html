@@ -1,9 +1,9 @@
 <section class="special-section" id="my-projetcs">
-    <h2 class="color_primary">My projects</h2>
+    <h2 class="color_primary"> {{ languageCache.nav[2] }} </h2>
     <div class="max-size_v">
         <div class="position-lables" id="projects"> 
             @for (projects of myProjects; track $index) {
-                <p class="btn shape_lable only_mobile" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}_mobile"> {{ projects.number }}. Project</p>
+                <p class="btn shape_lable only_mobile" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}_mobile"> {{ projects.number }}. {{ languageCache.projetcs[0] }}</p>
                 <p class="btn shape_lable only_desktop" (click)="getProjectDetails(projects)" id="pro{{ projects.number }}_desktop"> {{ projects.name }}</p>
             }  
         </div>
@@ -14,18 +14,18 @@
                         <h2 class="color_primary only_mobile">  {{ currentProject[0].name }} </h2>
                         <div class="row">
                             <div class="column only_desktop">
-                                <p class="only_desktop" [style.padding-bottom.px]="16">Technologies</p>
+                                <p class="only_desktop" [style.padding-bottom.px]="16">{{ languageCache.projetcs[1] }}</p>
                                 <div class="project-techlist_desktop" id="project-techlist-desktop"></div>
                             </div>
-                            <p class="small-font only_mobile">Technologies: </p><p class="small-font only_mobile" id="project-techlist"> {{ currentProject[0].tech }} </p>
+                            <p class="small-font only_mobile">{{ languageCache.projetcs[1] }}: </p><p class="small-font only_mobile" id="project-techlist"> {{ currentProject[0].tech }} </p>
                         </div>
                         <div class="row only_mobile">
-                            <p class="small-font">Duration: </p><p class="small-font" id="project-duration"> {{ currentProject[0].duration }} </p>
+                            <p class="small-font">{{ languageCache.projetcs[2] }}: </p><p class="small-font" id="project-duration"> {{ currentProject[0].duration }} </p>
                         </div>
                     </div>
                     <img class="project-img" src=" {{ currentProject[0].img }} " alt="" id="pjroject-img">
                     <div class="row only_desktop" [style.gap.px]="32" [style.padding-top.px]="32">
-                        <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
+                        <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">{{ languageCache.projetcs[3] }}</a>
                         <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
                     </div>
                 </div>
@@ -33,28 +33,28 @@
                     <div class="project-details">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
-                            <h3 class="no_margin">About the project</h3>
+                            <h3 class="no_margin">{{ languageCache.projetcs[4] }}</h3>
                         </div>
                         <span> {{ currentProject[0].about }} </span>
                     </div>
                     <div class="project-details">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
-                            <h3 class="no_margin">How I have organised my work</h3>
+                            <h3 class="no_margin">{{ languageCache.projetcs[5] }}</h3>
                         </div>
                         <span> {{ currentProject[0].how }} </span>
                     </div>
                     <div class="project-details">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
-                            <h3 class="no_margin">My group work experience</h3>
+                            <h3 class="no_margin">{{ languageCache.projetcs[6] }}</h3>
                         </div>
                         <span> {{ currentProject[0].exp }} </span>
                     </div>
                 </div>
             </div>
             <div class="row only_mobile" [style.gap.px]="32">
-                <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">Live test</a>
+                <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">{{ languageCache.projetcs[3] }}</a>
                 <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
             </div>
         </div>

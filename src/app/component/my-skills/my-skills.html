@@ -1,5 +1,5 @@
 <section id="my-skills">
-    <h2 class="color_primary">My skills</h2>
+    <h2 class="color_primary"> {{ languageCache.nav[1] }} </h2>
     <div class="orientation">
         <div class="icon_wrapper">
             @for (skills of mySkills; track $index) {
@@ -11,9 +11,9 @@
         </div>
         <!-- Mobile view -->
         <div class="column only_mobile">
-            <h3>What am I currently learning</h3>
+            <h3> {{ languageCache.ms[0] }} </h3>
             <div class="container" [style.gap.px]="16">
-                <span class="special-paragraph alignment_left">What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning?</span>
+                <span class="special-paragraph alignment_left"> {{ languageCache.ms[1] }} </span>
                 <div class="row bg">
                     @for (learn of currentlyLearning; track $index) {
                         <div class="column" [style.gap.px]="16" [style.margin.px]="8">
@@ -26,7 +26,7 @@
         </div>
         <!-- Desktop view -->
         <div class="bg to-learn_wrapper">
-            <p>I'm currently learning</p>
+            <p> {{ languageCache.ms[0] }} </p>
             <div class="row">
                 @for (learn of currentlyLearning; track $index) {
                     <div class="column" [style.gap.px]="16" [style.margin.px]="24">
@@ -35,7 +35,7 @@
                     </div> 
                 }
             </div>
-            <span class="special-paragraph">What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning? What am I currently learning?</span>
+            <span class="special-paragraph"> {{ languageCache.ms[1] }} </span>
         </div>
     </div>
 </section>
