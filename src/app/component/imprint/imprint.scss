@@ -1,3 +1,33 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/typography';
 @use '../../../styles/basic';
+
+header{
+    width: calc(100% - 64px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.main-section{
+    width: calc(100% - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 16px;
+}
+
+.title-imprint{
+    margin: 0;
+    padding-bottom: 16px;
+    padding-top: 24px;
+    text-align: start;
+}
+
+a{
+    &:hover{
+        color: $primary;
+    }
+}
