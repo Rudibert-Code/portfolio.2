@@ -1,14 +1,11 @@
 {
     "DE":{
-        "nav1":"Warum ich",
-        "nav2":"Fähigkeiten",
-        "nav3":"Projekte",
-        "nav4":"Kontakdaten"
+        "nav":[
+            "Warum ich","Fähigkeiten","Projekte","Kontakdaten"],
+        "header":"Frontend Entwickler"
     },
     "EN":{
-        "nav1":"Why me",
-        "nav2":"Skills",
-        "nav3":"Projects",
-        "nav4":"Contact"
+        "nav":["Why me","Skills","Projects","Contacts"],
+        "header":"Frontend Developer"
     }
 }

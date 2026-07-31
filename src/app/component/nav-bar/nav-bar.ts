@@ -1,8 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import Language from '../../shared/language/languages.json'
 
-let languageCache:string = 'DE';
-
 @Injectable({
   providedIn: 'root',
 })
