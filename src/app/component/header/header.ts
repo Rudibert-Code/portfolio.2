@@ -1,7 +1,5 @@
 import { Component, Injectable } from '@angular/core';
 
-const overlay = document.getElementById('overlay') as HTMLDialogElement;
-
 @Injectable({
   providedIn: 'root',
 })
@@ -12,15 +10,18 @@ const overlay = document.getElementById('overlay') as HTMLDialogElement;
   styleUrl: './header.scss',
 })
 export class Header {
+  
+
   quickLink(link:string){
     window.open(link);
   }
 
-  openDialog(){
-    overlay?.show();
+  openMenu(){
+    let burgerPopup = document.getElementById('overlay') as HTMLDivElement;
+    burgerPopup.style.display = "flex";
   }
 
-  closeDialog(){
-    overlay?.close();
+  closeMenu(){
+   // this.burgerPopup.style.display = "none";
   }
 }
