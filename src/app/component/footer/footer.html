@@ -6,7 +6,7 @@
         <div class="btn icon_linkedin-footer" (click)="header.quickLink('https://www.linkedin.com/in/bj%C3%B6rn-sagmeister-358558a5/')"></div>
     </div>
     <div class="legal-notice">
-        <a [routerLink]="['/imprint']">Legal notice</a>
+        <a [routerLink]="['/imprint']"></a>
         <p>© Claudia Fohrer 2024</p>
     </div>
 </footer>
@@ -14,7 +14,7 @@
 <footer class="only_desktop">
     <div class="footer-container">
         <div class="legal-notice">
-            <a [routerLink]="['/imprint']">Legal notice</a>
+            <a [routerLink]="['/imprint']"> {{ languageCache.footer }} </a>
             <p>© Claudia Fohrer 2024</p>
         </div>
         <img src="assets/logo-dark.png" [style.padding-top.px]="16" alt="">

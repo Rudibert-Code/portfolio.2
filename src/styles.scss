@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 body{
   background-color: $background;
   margin: 0;

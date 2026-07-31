@@ -74,5 +74,8 @@ export class NavBar {
         this.languageCache = Language.EN;
         break;
     }
+    let selectedLanguage = JSON.stringify(this.languageCache)
+    localStorage.setItem("test", selectedLanguage);
+    
   }
 }
