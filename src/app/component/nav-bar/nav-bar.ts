@@ -1,5 +1,7 @@
 import { Component, Injectable } from '@angular/core';
-import Language from '../../shared/language/languages.json'
+import Language from "../../shared/language/languages.json";
+
+let languageCache:string[]=[];
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,11 @@ import Language from '../../shared/language/languages.json'
   styleUrl: './nav-bar.scss',
 })
 export class NavBar {
-  navText = Language.DE;
+  languageCache = Language.DE;
+
+  ngOnInit(){
+    console.table(this.languageCache)
+  }
 
   // markiert Navigationselement ...
   markElement(id:string,type:string){
@@ -54,15 +60,15 @@ export class NavBar {
   changeLanguage(languageID:string){
     switch (languageID) {
       case 'DE':
-        this.navText = Language.DE;
+        this.languageCache = Language.DE;
         break;
 
       case 'EN':
-        this.navText = Language.EN;
+        this.languageCache = Language.EN;
         break;
       
       default:
-        this.navText = Language.EN;
+        this.languageCache = Language.EN;
         break;
     }
   }

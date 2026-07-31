@@ -1,5 +1,4 @@
 import { Component, Injectable, HostListener } from '@angular/core';
-import Language from '../../shared/language/languages.json';
 
 let popupOpen:boolean = false;
 
@@ -13,7 +12,6 @@ let popupOpen:boolean = false;
   styleUrl: './header.scss',
 })
 export class Header {
-  text = Language.DE;
 
   @HostListener('document:click', ['$event'])
   closeMenu(event: MouseEvent){

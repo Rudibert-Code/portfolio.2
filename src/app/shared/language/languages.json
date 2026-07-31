@@ -1,11 +1,11 @@
 {
     "DE":{
+        "header":"Frontend Entwickler",
         "nav":[
-            "Warum ich","Fähigkeiten","Projekte","Kontakdaten"],
-        "header":"Frontend Entwickler"
+            "Warum ich","Fähigkeiten","Projekte","Kontakdaten"] 
     },
     "EN":{
-        "nav":["Why me","Skills","Projects","Contacts"],
-        "header":"Frontend Developer"
+        "header":"Frontend Developer",
+        "nav":["Why me","Skills","Projects","Contacts"]
     }
 }
