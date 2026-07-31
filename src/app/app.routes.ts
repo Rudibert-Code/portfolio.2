@@ -16,4 +16,13 @@ export const routes: Routes = [
         path:'privacy',
         component:PrivacyPolicy
     },
+
+    //{
+    //path:'',
+    //    component:Main,
+    //    children: [
+    //      { path: 'imprint', component: Imprint },
+    //      { path: 'privacy', component: PrivacyPolicy },
+    //    ]
+    //}
 ];
