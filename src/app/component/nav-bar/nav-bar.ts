@@ -1,5 +1,7 @@
 import { Component, Injectable } from '@angular/core';
+import Language from '../../shared/language/languages.json'
 
+let languageCache:string = 'DE';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +13,8 @@ import { Component, Injectable } from '@angular/core';
   styleUrl: './nav-bar.scss',
 })
 export class NavBar {
+  navText = Language.DE;
+
   // markiert Navigationselement ...
   markElement(id:string,type:string){
     let targetElement = document.getElementById(id) as HTMLAnchorElement;
@@ -19,7 +23,7 @@ export class NavBar {
         this.clearNavigation();
         break;
       case 'lan':
-        this.clearLanguage();
+        this.clearLanguage(id);
         break;
       default:
         break;
@@ -40,10 +44,28 @@ export class NavBar {
   }
 
   // löscht Markierung auf Sprach-Toggle ...
-  clearLanguage(){
+  clearLanguage(languageID:string){
     let l1 = document.getElementById('DE') as HTMLParagraphElement;
     let l2 = document.getElementById('EN') as HTMLParagraphElement;
     l1.classList.remove('marked');
     l2.classList.remove('marked');
+
+    this.changeLanguage(languageID);
+  }
+
+  changeLanguage(languageID:string){
+    switch (languageID) {
+      case 'DE':
+        this.navText = Language.DE;
+        break;
+
+      case 'EN':
+        this.navText = Language.EN;
+        break;
+      
+      default:
+        this.navText = Language.EN;
+        break;
+    }
   }
 }

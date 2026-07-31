@@ -1,0 +1,14 @@
+{
+    "DE":{
+        "nav1":"Warum ich",
+        "nav2":"Fähigkeiten",
+        "nav3":"Projekte",
+        "nav4":"Kontakdaten"
+    },
+    "EN":{
+        "nav1":"Why me",
+        "nav2":"Skills",
+        "nav3":"Projects",
+        "nav4":"Contact"
+    }
+}
