@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { LanguagePopup } from '../language-popup/language-popup';
 
 @Component({
   selector: 'app-imprintcomponent',
@@ -7,4 +8,6 @@ import { RouterLink } from "@angular/router";
   templateUrl: './imprint.html',
   styleUrl: './imprint.scss',
 })
-export class ImprintComponent {}
+export class ImprintComponent {
+popup = inject(LanguagePopup);
+}
