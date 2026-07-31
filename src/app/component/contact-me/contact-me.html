@@ -1,7 +1,7 @@
 <section id="contact-me">
     <div class="contact_title">
         <div class="only_desktop" [style.width.px]="54"></div>
-        <h2 class="color_primary">Contact me</h2>
+        <h2 class="color_primary"> {{ languageCache.contact[0] }} </h2>
         <a class="button-base size_arrow only_desktop" [style.margin-bottom.px]="32" href="#header">
             <svg width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.10138 4.58504L2.18916 10.8881C1.80741 11.2362 1.22333 11.2362 0.841574 10.8881L0.325962 10.4179C-0.108978 10.0213 -0.108978 9.33665 0.325962 8.94005L9.84183 0.262848C10.2236 -0.0852585 10.8077 -0.0852585 11.1894 0.262848L20.7053 8.94005C21.1402 9.33665 21.1402 10.0213 20.7053 10.4179L20.1897 10.8881C19.8079 11.2362 19.2238 11.2362 18.8421 10.8881L11.9299 4.58504L11.9299 48.6484C11.9299 49.2007 11.4822 49.6484 10.9299 49.6484H10.1014C9.54909 49.6484 9.10138 49.2007 9.10138 48.6484L9.10138 4.58504Z" fill="#89BCD9"/>
@@ -10,7 +10,7 @@
     </div>
     <div class="contact_text">
         <!-- Text to encurage people to message you -->
-        <span>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </span>
+        <span> {{ languageCache.contact[1] }} </span>
         <div class="contact_contacts">
             <a class="btn contact_details" href="mailto:bjoernsagmeister@gmail.com">
                 <img src="assets/icons/icon_email.png" alt="" id="icon_email">
@@ -22,24 +22,24 @@
             </a>
         </div>
     </div>
-    <p class="color_primary only_mobile">Let us work together!</p>
+    <p class="color_primary only_mobile"> {{ languageCache.contact[2] }} </p>
     <form class="input" action="mailto:bjoernsagmeisterdev@gmail.com" method="post" enctype="text/plain" id="form">
         <div class="input_base">
             <div class="input" id="contact_name">
-                <input (keyup)="checkInputState('input-name')" class="input_area" type="text" placeholder="Your name" name="name" value="" id="input-name">
+                <input (keyup)="checkInputState('input-name')" class="input_area" type="text" placeholder=" {{ languageCache.contact[3] }} " name="name" value="" id="input-name">
             </div>
             <div class="input" id="contact_email">
-                <input (keyup)="checkInputState('input-email')" class="input_area" type="text" placeholder="Your email" value="" id="input-email">
+                <input (keyup)="checkInputState('input-email')" class="input_area" type="text" placeholder=" {{ languageCache.contact[4] }} " value="" id="input-email">
             </div>
         </div>
-        <textarea (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder="Your message..." rows="4" id="input-text"></textarea>
+        <textarea (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder=" {{ languageCache.contact[5] }} " rows="4" id="input-text"></textarea>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
-            <p class="visible_normal">I've read the <a [routerLink]="['/privacy']" class="color_primary visible_normal">privacy policy</a> and agree to the processing of my data as outlined.</p>
-            <a class="color_primary visible_small" [routerLink]="['/privacy']">privacy policy</a>
+            <p class="visible_normal"> {{ languageCache.contact[6] }} <a [routerLink]="['/privacy']" class="color_primary visible_normal"> {{ languageCache.contact[7] }} </a>  {{ languageCache.contact[8] }} </p>
+            <a class="color_primary visible_small" [routerLink]="['/privacy']"> {{ languageCache.contact[7] }} </a>
         </div>
         <div (click)="sendEmail()" class="contact_footer">
-            <a class="button-base-blocked size_button" id="send-button">Send</a>
+            <a class="button-base-blocked size_button" id="send-button"> {{ languageCache.contact[9] }} </a>
         </div>
         <a class="button-base size_arrow only_mobile" [style.margin-bottom.px]="32" href="#header">
             <svg width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">

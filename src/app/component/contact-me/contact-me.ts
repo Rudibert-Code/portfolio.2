@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import Language from "../../shared/language/languages.json";
 
 interface User{
   name:string,
@@ -23,6 +24,34 @@ export class ContactMe {
       checkbox:false
     }
   ]
+
+  languageCache = Language.DE;
+
+  @HostListener('document:click', ['$event'])
+    closeMenu(event: MouseEvent){
+      this.ngOnInit();
+    }
+
+  ngOnInit(){
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+  }
+
+  changeLanguage(languageID:string){
+    switch (languageID) {
+      case 'DE':
+        this.languageCache = Language.DE;
+        break;
+
+      case 'EN':
+        this.languageCache = Language.EN;
+        break;
+      
+      default:
+        this.languageCache = Language.EN;
+        break;
+    }
+  }
 
   sendEmail(){
     if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
