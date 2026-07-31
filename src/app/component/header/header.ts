@@ -1,6 +1,8 @@
 import { Component, Injectable, HostListener } from '@angular/core';
+import Language from "../../shared/language/languages.json";
 
 let popupOpen:boolean = false;
+let languageCache:string[]=[];
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +14,12 @@ let popupOpen:boolean = false;
   styleUrl: './header.scss',
 })
 export class Header {
+  languageCache = Language.DE;
+
+  ngOnInit(){
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+  }
 
   @HostListener('document:click', ['$event'])
   closeMenu(event: MouseEvent){
@@ -48,5 +56,21 @@ export class Header {
     DE.classList.remove('marked');
     EN.classList.remove('marked');
     selected.classList.add('marked');
+  }
+
+  changeLanguage(languageID:string){
+    switch (languageID) {
+      case 'DE':
+        this.languageCache = Language.DE;
+        break;
+
+      case 'EN':
+        this.languageCache = Language.EN;
+        break;
+      
+      default:
+        this.languageCache = Language.EN;
+        break;
+    }
   }
 }

@@ -16,7 +16,9 @@ export class NavBar {
   languageCache = Language.DE;
 
   ngOnInit(){
-    console.table(this.languageCache)
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+    this.markElement(selectedLanguageID,'lan');
   }
 
   // markiert Navigationselement ...
@@ -58,6 +60,7 @@ export class NavBar {
   }
 
   changeLanguage(languageID:string){
+    localStorage.setItem("language", languageID);
     switch (languageID) {
       case 'DE':
         this.languageCache = Language.DE;
