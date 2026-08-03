@@ -76,6 +76,5 @@ export class NavBar {
     }
     let selectedLanguage = JSON.stringify(this.languageCache)
     localStorage.setItem("test", selectedLanguage);
-    
   }
 }

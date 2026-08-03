@@ -26,6 +26,16 @@ let isLoaded:boolean = false;
 export class MyProjects {
   languageCache = Language.DE;
 
+  @HostListener('document:click', ['$event'])
+    closeMenu(event: MouseEvent){
+      this.ngOnInit();
+    }
+
+  ngOnInit(){
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+  }
+
   // Starting project + details
   currentProject:Project[]=[
     {
@@ -99,16 +109,6 @@ export class MyProjects {
       git:''
     },
   ]
-
-  @HostListener('document:click', ['$event'])
-    closeMenu(event: MouseEvent){
-      this.ngOnInit();
-    }
-
-  ngOnInit(){
-    let selectedLanguageID = String(localStorage.getItem("language"));
-    this.changeLanguage(selectedLanguageID);
-  }
 
   changeLanguage(languageID:string){
     switch (languageID) {
