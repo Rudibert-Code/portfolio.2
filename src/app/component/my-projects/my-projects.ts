@@ -104,7 +104,9 @@ export class MyProjects {
       ],
       duration:' 5 Weeks',
       img:'assets/img/img_join.png',
-      about:(this.languageCache.projetcs[9]),
+      about:String(this.languageCache.projetcs[9]),
+      how:String(this.languageCache.projetcs[11]),
+      exp:String(this.languageCache.projetcs[10]),
       link:'',
       git:''
     },
