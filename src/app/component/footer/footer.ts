@@ -23,7 +23,6 @@ export class Footer {
     let selectedLanguageID = String(localStorage.getItem("language"));
     this.changeLanguage(selectedLanguageID);
     let languageString = localStorage.getItem("test") ?? '{}';
-    console.table(JSON.parse(languageString))
   }
 
   changeLanguage(languageID:string){

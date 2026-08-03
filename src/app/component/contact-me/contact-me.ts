@@ -70,15 +70,15 @@ export class ContactMe {
 
     if (this.newUser[0].name == "") {
       userName.classList.add("input_error");
-      userName.value="Your name is required";  
+      userName.value= String(this.languageCache.contact[10]);  
     }
     if (this.newUser[0].email == "") {
       userEmail.classList.add("input_error");
-      userEmail.value="Your email is required";  
+      userEmail.value= String(this.languageCache.contact[11]);  
     }
     if (this.newUser[0].message == "") {
       userMessage.classList.add("input_error");
-      userMessage.value="Your message is required";  
+      userMessage.value= String(this.languageCache.contact[12]);  
     }
     if (this.newUser[0].checkbox == false) {
       checkboxState.classList.add("error");  
