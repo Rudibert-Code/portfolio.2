@@ -1,6 +1,8 @@
 import { Component, Injectable, HostListener } from '@angular/core';
+import Language from "../../shared/language/languages.json";
 
 let popupOpen:boolean = false;
+let languageCache:string[]=[];
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +14,8 @@ let popupOpen:boolean = false;
   styleUrl: './language-popup.scss',
 })
 export class LanguagePopup {
+  languageCache = Language.DE;
+
   markedLanguage(ID:string){
     const DE = document.getElementById('DE') as HTMLDivElement;
     const EN = document.getElementById('EN') as HTMLDivElement;
@@ -19,6 +23,7 @@ export class LanguagePopup {
     DE.classList.remove('marked');
     EN.classList.remove('marked');
     selected.classList.add('marked');
+    this.changeLanguage(ID);
   }
 
   @HostListener('document:click', ['$event'])
@@ -43,5 +48,25 @@ export class LanguagePopup {
       overlay.style.display = "flex";
       popupOpen = true;
     }
+  }
+
+  changeLanguage(languageID:string){
+    localStorage.setItem("language", languageID);
+    switch (languageID) {
+      case 'DE':
+        this.languageCache = Language.DE;
+        break;
+
+      case 'EN':
+        this.languageCache = Language.EN;
+        break;
+      
+      default:
+        this.languageCache = Language.EN;
+        break;
+    }
+    let selectedLanguage = JSON.stringify(this.languageCache)
+    localStorage.setItem("test", selectedLanguage);
+    
   }
 }
