@@ -2,7 +2,7 @@ import { Component, Injectable, HostListener } from '@angular/core';
 import Language from "../../shared/language/languages.json";
 
 let popupOpen:boolean = false;
-let languageCache:string[]=[];
+//let languageCache:string[]=[];
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +15,12 @@ let languageCache:string[]=[];
 })
 export class LanguagePopup {
   languageCache = Language.DE;
+
+  ngOnInit(){
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+    this.markedLanguage(selectedLanguageID);
+  }
 
   markedLanguage(ID:string){
     const DE = document.getElementById('DE') as HTMLDivElement;
