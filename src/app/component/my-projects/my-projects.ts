@@ -8,9 +8,9 @@ interface Project{
   techIMG:string[],
   duration:string,
   img:string,
-  about?:string,
-  how?:string,
-  exp?:string,
+  about:string,
+  how:string,
+  exp:string,
   link:string,
   git:string
 }
@@ -25,16 +25,6 @@ let isLoaded:boolean = false;
 })
 export class MyProjects {
   languageCache = Language.DE;
-
-  @HostListener('document:click', ['$event'])
-    closeMenu(event: MouseEvent){
-      this.ngOnInit();
-    }
-
-  ngOnInit(){
-    let selectedLanguageID = String(localStorage.getItem("language"));
-    this.changeLanguage(selectedLanguageID);
-  }
 
   // Starting project + details
   currentProject:Project[]=[
@@ -51,6 +41,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
       about: String(this.languageCache.projetcs[7]),
+      how:"",
+      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -71,6 +63,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
       about:String(this.languageCache.projetcs[7]),
+      how:"",
+      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -87,6 +81,8 @@ export class MyProjects {
       duration:' 3 Weeks',
       img:'assets/img/img_pokedex.jpg',
       about:String(this.languageCache.projetcs[8]),
+      how:"",
+      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
       git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
@@ -112,6 +108,20 @@ export class MyProjects {
     },
   ]
 
+  @HostListener('document:click', ['$event'])
+    closeMenu(event: MouseEvent){
+      this.ngOnInit();
+    }
+
+  ngOnInit(){
+    let selectedLanguageID = String(localStorage.getItem("language"));
+    this.changeLanguage(selectedLanguageID);
+    
+    setTimeout(()=>{
+      this.getProjectDetails(this.currentProject[0])
+    },0)
+  }
+
   changeLanguage(languageID:string){
     switch (languageID) {
       case 'DE':
@@ -133,6 +143,26 @@ export class MyProjects {
     this.currentProject.push(project);
     this.markProjectLable(project.number);
     this.setProjectTechList();
+    this.hideEmptyHowSection(project);
+    this.hideEmptyEXPSection(project);
+  }
+
+  hideEmptyHowSection(project:Project){
+    let container = document.getElementById('container_how') as HTMLDivElement;
+    if (project.how == "") {
+      container.style.display = "none";
+    } else{
+      container.style.display = "flex";
+    }
+  }
+
+  hideEmptyEXPSection(project:Project){
+    let container = document.getElementById('container_exp') as HTMLDivElement;
+    if (project.exp == "") {
+      container.style.display = "none";
+    } else{
+      container.style.display = "flex";
+    }
   }
 
   initFunction(){
