@@ -24,6 +24,8 @@ let isLoaded:boolean = false;
   styleUrl: './my-projects.scss',
 })
 export class MyProjects {
+  languageCache = Language.DE;
+
   // Starting project + details
   currentProject:Project[]=[
     {
@@ -38,7 +40,7 @@ export class MyProjects {
       ],
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about:'About...',
+      about: String(this.languageCache.projetcs[7]),
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -58,7 +60,7 @@ export class MyProjects {
       ],
       duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about:'About...',
+      about:String(this.languageCache.projetcs[7]),
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -74,7 +76,7 @@ export class MyProjects {
       ],
       duration:' 3 Weeks',
       img:'assets/img/img_pokedex.jpg',
-      about:'About...',
+      about:String(this.languageCache.projetcs[8]),
       link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
       git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
@@ -92,13 +94,11 @@ export class MyProjects {
       ],
       duration:' 5 Weeks',
       img:'assets/img/img_join.png',
-      about:'About...',
+      about:(this.languageCache.projetcs[9]),
       link:'',
       git:''
     },
   ]
-
-  languageCache = Language.DE;
 
   @HostListener('document:click', ['$event'])
     closeMenu(event: MouseEvent){
