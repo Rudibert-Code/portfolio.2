@@ -5,7 +5,33 @@
         "nav":["Warum ich","Fähigkeiten","Projekte","Kontakdaten"] ,
         "wm":["Ich wohne","in Pirmasens...","Durch meine frühere Anstellung als 2D Generalist hatte ich regelmäßigen Einblick in das Themengebiet der Frontend Entwicklung. Das strukturierte Arbeiten, das Gefühl ein Problem zu lösen und die stetigen Neuerungen im Bereich der Entwicklung haen mich schon immer begeistert.","Ansprechen"],
         "ms":["Ich lerne gerade","Ich habe vor Kurzem den Intensivkurs im Bereich Frontend Entwicklung der Developer Akademie abgeschlossen und bin zur Zeit damit beschäftigt meine Fähigkeiten im Umgang mit Angular auszubauen."],
-        "projetcs":["Projekt","Technologien","Dauer","Testen","Über das Projekt","Organisation","Erfahrungen","Bei Space Blast handelt es sich um ein Übungsprojekt der Developer Akademie, bei dem objektorientiertes Programmieren behnadelt wurde. Die Grafiken und Animationen wurden von mir selbst in Photoshop und Spine 2D erstellt.","Beim Pokedex handelt es sich um ein Übungsprojekt der Developer Akademie, welches zur Einführung in das Thema API und den Umgang mit Datenbanken diente.","Bei Join handelt es sich um das Abschlussprojekt der Developer Akademie: Ein Projektmanagement Tool welches in Zusammenarbeit mit zwei weiteren Teampartnern von Grund auf geplant und erstellt wurde.","Kommunikation innerhalb eines Teams , das Lösen von Merge-Konflikten und die Nutzung von Angular und Typescript.","Das Projekt wurde in Sprints unterteilt, Tickets über eine Kanban Board Anwendung erstellt und Teammitgliedern zugewiesen. Zusätzlich gab es Tägliche Sprint-Meetings, während denen Zwischenstände präsentiert und Mögliche Probleme in der Gruppe  besprochen und ggf. zusammen gelöst wurden. "],
+        "projetcs":[
+            "Projekt",
+            "Technologien",
+            "Dauer",
+            "Testen",
+            "Über das Projekt",
+            "Organisation",
+            "Erfahrungen"
+        ],
+        "p1":[
+            "Bei Space Blast handelt es sich um ein Übungsprojekt der Developer Akademie, bei dem objektorientiertes Programmieren behnadelt wurde. Die Grafiken und Animationen wurden von mir selbst in Photoshop und Spine 2D erstellt.",
+            "3 Wochen",
+            "",
+            ""
+        ],
+        "p2":[
+            "Beim Pokedex handelt es sich um ein Übungsprojekt der Developer Akademie, welches zur Einführung in das Thema API und den Umgang mit Datenbanken diente.",
+            "3 Wochen",
+            "",
+            ""
+        ],
+        "p3":[
+            "Bei Join handelt es sich um das Abschlussprojekt der Developer Akademie: Ein Projektmanagement Tool welches in Zusammenarbeit mit zwei weiteren Teampartnern von Grund auf geplant und erstellt wurde.",
+            "5 Wochen",
+            "Kommunikation innerhalb eines Teams , das Lösen von Merge-Konflikten und die Nutzung von Angular und Typescript.",
+            "Das Projekt wurde in Sprints unterteilt, Tickets über eine Kanban Board Anwendung erstellt und Teammitgliedern zugewiesen. Zusätzlich gab es Tägliche Sprint-Meetings, während denen Zwischenstände präsentiert und Mögliche Probleme in der Gruppe  besprochen und ggf. zusammen gelöst wurden. "
+        ],
         "recommendations":["Sie suchen einen Teamplayer?","Das sagen meine Kollegen über mich"],
         "contact":["Schreiben sie mir","Sehr gerne würde ich mich weiter mit Ihnen über meine Qualifikationen und darüber unterhalten, wie ich eine Bereicherung für Ihr Unternehmen sein könnte.","Lassen Sie uns zusammenarbeiten!","Ihr Name","Ihre Email","Ihre Nachricht...","Ich habe die","Datenschutzrichtlinien","gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.","Senden","Ihr Name ist erforderlich","Ihre E-Mail ist erforderlich","Hinterlassen Sie eine Nachricht"],
         "footer":"Rechtliche Hinweise",
@@ -18,7 +44,33 @@
         "nav":["Why me","Skills","Projects","Contacts"],
         "wm":["I am","located in Pirmasens...","Through my previous role as a 2D generalist, I gained regular insight into the field of frontend development. I have always been enthusiastic about structured workflows, the satisfaction of solving problems, and the constant innovations in the development sector.","Let's talk"],
         "ms":["I'm currently learning","I recently completed the intensive frontend development course at the Developer Akademie and am currently busy expanding my skills in Angular."],
-        "projetcs":["Project","Technologies","Duration","Live test","About the project","How I have organised my work","My group work experience","Space Blast is a practice project from the Developer Academy that focused on object-oriented programming. I created the graphics and animations myself using Photoshop and Spine 2D.","Pokedex is a practice project from the Developer Academy that served as an introduction to APIs and working with databases.","Join is the final project of the Developer Academy: a project management tool that was planned and built from the ground up in collaboration with two other team members.","Communication within a team, resolving merge conflicts, and using Angular and TypeScript.","The project was divided into sprints, tickets were created using a Kanban board application and assigned to team members. In addition, there were daily sprint meetings during which progress reports were presented and potential problems were discussed as a group and, where necessary, resolved collaboratively."],
+        "projetcs":[
+            "Project",
+            "Technologies",
+            "Duration",
+            "Live test",
+            "About the project",
+            "How I have organised my work",
+            "My group work experience"
+        ],
+        "p1":[
+            "Space Blast is a practice project from the Developer Academy that focused on object-oriented programming. I created the graphics and animations myself using Photoshop and Spine 2D.",
+            "3 Weeks",
+            "",
+            ""
+        ],
+        "p2":[
+            "Pokedex is a practice project from the Developer Academy that served as an introduction to APIs and working with databases.",
+            "3 Weeks",
+            "",
+            ""
+        ],
+        "p3":[
+            "Join is the final project of the Developer Academy: a project management tool that was planned and built from the ground up in collaboration with two other team members.",
+            "5 Weeks",
+            "Communication within a team, resolving merge conflicts, and using Angular and TypeScript.",
+            "The project was divided into sprints, tickets were created using a Kanban board application and assigned to team members. In addition, there were daily sprint meetings during which progress reports were presented and potential problems were discussed as a group and, where necessary, resolved collaboratively."
+        ],
         "recommendations":["Need a teamplayer?","Here’s what my colleagues say about me"],
         "contact":["Contact me","I would love to talk to you further about my qualifications and how I could be an asset for your company.","Let us work together!","Your name","Your email","Your message...","I've read the","privacy policy","and agree to the processing of my data as outlined.","Send","Your name is required","Your email is required","Your message is required"],
         "footer":"Legal Notice",

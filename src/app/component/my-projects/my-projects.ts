@@ -6,13 +6,16 @@ interface Project{
   name:string,
   tech:string,
   techIMG:string[],
-  duration:string,
   img:string,
-  about:string,
-  how:string,
-  exp:string,
   link:string,
   git:string
+}
+
+interface ProjectDesc{
+  about:string,
+  duration:string,
+  organization?:string,
+  experience?:string,
 }
 
 let isLoaded:boolean = false;
@@ -38,14 +41,19 @@ export class MyProjects {
         'assets/icons/skill_css.png',
         'assets/icons/skill_git.png'
       ],
-      duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about: String(this.languageCache.projetcs[7]),
-      how:"",
-      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
+  ]
+
+  currentProjectDesc: ProjectDesc[]=[
+    {
+      about:this.languageCache.p1[0],
+      duration:this.languageCache.p1[1],
+      organization:this.languageCache.p1[2],
+      experience:this.languageCache.p1[3]
+    }
   ]
 
   // List of projects + details
@@ -60,11 +68,7 @@ export class MyProjects {
         'assets/icons/skill_css.png',
         'assets/icons/skill_git.png'
       ],
-      duration:' 3 Weeks',
       img:'assets/img/img_space-blast.png',
-      about:String(this.languageCache.projetcs[7]),
-      how:"",
-      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
@@ -78,11 +82,7 @@ export class MyProjects {
         'assets/icons/skill_css.png',
         'assets/icons/skill_git.png'
       ],
-      duration:' 3 Weeks',
       img:'assets/img/img_pokedex.jpg',
-      about:String(this.languageCache.projetcs[8]),
-      how:"",
-      exp:"",
       link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
       git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
@@ -98,11 +98,7 @@ export class MyProjects {
         'assets/icons/skill_git.png',
         'assets/icons/skill_supabase.png'
       ],
-      duration:' 5 Weeks',
       img:'assets/img/img_join.png',
-      about:String(this.languageCache.projetcs[9]),
-      how:String(this.languageCache.projetcs[11]),
-      exp:String(this.languageCache.projetcs[10]),
       link:'',
       git:''
     },
@@ -110,13 +106,15 @@ export class MyProjects {
 
   @HostListener('document:click', ['$event'])
     closeMenu(event: MouseEvent){
+      console.log("listener works")
       this.ngOnInit();
     }
 
   ngOnInit(){
     let selectedLanguageID = String(localStorage.getItem("language"));
     this.changeLanguage(selectedLanguageID);
-    
+    this.updateProjectLanguage(this.currentProject[0].number);
+ 
     setTimeout(()=>{
       this.getProjectDetails(this.currentProject[0])
     },0)
@@ -143,25 +141,43 @@ export class MyProjects {
     this.currentProject.push(project);
     this.markProjectLable(project.number);
     this.setProjectTechList();
-    this.hideEmptyHowSection(project);
-    this.hideEmptyEXPSection(project);
+    this.updateProjectLanguage(project.number);
+    this.hideEmpty();
   }
 
-  hideEmptyHowSection(project:Project){
-    let container = document.getElementById('container_how') as HTMLDivElement;
-    if (project.how == "") {
-      container.style.display = "none";
-    } else{
-      container.style.display = "flex";
+  updateProjectLanguage(projectNumber:number){
+    if (projectNumber == 1) {
+      this.currentProjectDesc[0].about = this.languageCache.p1[0];
+      this.currentProjectDesc[0].duration = this.languageCache.p1[1];
+      this.currentProjectDesc[0].experience = this.languageCache.p1[2];
+      this.currentProjectDesc[0].organization = this.languageCache.p1[3];
+    } else if(projectNumber == 2){
+      this.currentProjectDesc[0].about = this.languageCache.p2[0];
+      this.currentProjectDesc[0].duration = this.languageCache.p2[1];
+      this.currentProjectDesc[0].experience = this.languageCache.p2[2];
+      this.currentProjectDesc[0].organization = this.languageCache.p2[3];
+    } else if(projectNumber == 3){
+      this.currentProjectDesc[0].about = this.languageCache.p3[0];
+      this.currentProjectDesc[0].duration = this.languageCache.p3[1];
+      this.currentProjectDesc[0].experience = this.languageCache.p3[2];
+      this.currentProjectDesc[0].organization = this.languageCache.p3[3];
     }
   }
 
-  hideEmptyEXPSection(project:Project){
-    let container = document.getElementById('container_exp') as HTMLDivElement;
-    if (project.exp == "") {
-      container.style.display = "none";
+  hideEmpty(){
+    let containerOrg = document.getElementById('container_how') as HTMLDivElement;
+    let containerExp = document.getElementById('container_exp') as HTMLDivElement;
+
+    if (this.currentProjectDesc[0].organization == "") {
+      containerOrg.style.display = "none";
     } else{
-      container.style.display = "flex";
+      containerOrg.style.display = "flex";
+    }
+    
+    if (this.currentProjectDesc[0].experience == "") {
+      containerExp.style.display = "none";
+    } else{
+      containerExp.style.display = "flex";
     }
   }
 
