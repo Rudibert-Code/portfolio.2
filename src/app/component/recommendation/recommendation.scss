@@ -18,6 +18,10 @@
     }
 }
 
+.hidden{
+    display: none;
+}
+
 .recommendation{
     &_base{
         display: flex;
