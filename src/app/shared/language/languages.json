@@ -8,13 +8,13 @@
             "Projekte",
             "Kontakdaten"
             ] ,
-        "wm":[
+        "whyme":[
             "Ich wohne",
             "in Pirmasens...",
             "Durch meine frühere Anstellung als 2D Generalist hatte ich regelmäßigen Einblick in das Themengebiet der Frontend Entwicklung. Das strukturierte Arbeiten, das Gefühl ein Problem zu lösen und die stetigen Neuerungen im Bereich der Entwicklung haen mich schon immer begeistert.",
             "Ansprechen"
         ],
-        "ms":[
+        "skills":[
             "Ich lerne gerade",
             "Ich habe vor Kurzem den Intensivkurs im Bereich Frontend Entwicklung der Developer Akademie abgeschlossen und bin zur Zeit damit beschäftigt meine Fähigkeiten im Umgang mit Angular auszubauen."
         ],
@@ -100,13 +100,13 @@
             "Projects",
             "Contacts"
         ],
-        "wm":[
+        "whyme":[
             "I am",
             "located in Pirmasens...",
             "Through my previous role as a 2D generalist, I gained regular insight into the field of frontend development. I have always been enthusiastic about structured workflows, the satisfaction of solving problems, and the constant innovations in the development sector.",
             "Let's talk"
         ],
-        "ms":[
+        "skills":[
             "I'm currently learning",
             "I recently completed the intensive frontend development course at the Developer Akademie and am currently busy expanding my skills in Angular."
         ],

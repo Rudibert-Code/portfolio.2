@@ -11,9 +11,9 @@
         </div>
         <!-- Mobile view -->
         <div class="column only_mobile">
-            <h3> {{ languageCache.ms[0] }} </h3>
+            <h3> {{ languageCache.skills[0] }} </h3>
             <div class="container" [style.gap.px]="16">
-                <span class="special-paragraph alignment_left"> {{ languageCache.ms[1] }} </span>
+                <span class="special-paragraph alignment_left"> {{ languageCache.skills[1] }} </span>
                 <div class="row bg">
                     @for (learn of currentlyLearning; track $index) {
                         <div class="column" [style.gap.px]="16" [style.margin.px]="8">
@@ -26,7 +26,7 @@
         </div>
         <!-- Desktop view -->
         <div class="bg to-learn_wrapper">
-            <p> {{ languageCache.ms[0] }} </p>
+            <p> {{ languageCache.skills[0] }} </p>
             <div class="row">
                 @for (learn of currentlyLearning; track $index) {
                     <div class="column" [style.gap.px]="16" [style.margin.px]="24">
@@ -35,7 +35,7 @@
                     </div> 
                 }
             </div>
-            <span class="special-paragraph"> {{ languageCache.ms[1] }} </span>
+            <span class="special-paragraph"> {{ languageCache.skills[1] }} </span>
         </div>
     </div>
 </section>
