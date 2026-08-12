@@ -32,11 +32,11 @@
     &_mail-footer{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/mail_footer.png");
+        background-image: url("../../../../public/assets/icons/mail_footer.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/mail_footer_hover.png");
+            background-image: url("../../../../public/assets/icons/mail_footer_hover.png");
             transition: 0.5s;
         }
     }
@@ -44,11 +44,11 @@
     &_git-footer{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/git_footer.png");
+        background-image: url("../../../../public/assets/icons/git_footer.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/git_footer_hover.png");
+            background-image: url("../../../../public/assets/icons/git_footer_hover.png");
             transition: 0.5s;
         }
     }
@@ -56,11 +56,11 @@
     &_linkedin-footer{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/linkedin_footer.png");
+        background-image: url("../../../../public/assets/icons/linkedin_footer.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/linkedin_footer_hover.png");
+            background-image: url("../../../../public/assets/icons/linkedin_footer_hover.png");
             transition: 0.5s;
         }
     }

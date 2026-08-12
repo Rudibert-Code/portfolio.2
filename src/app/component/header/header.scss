@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/img/overlay.png");
+    background-image: url("../../../../public/assets/img/overlay.png");
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -58,12 +58,12 @@
 }
 
 .user-img{
-    background-image: url("/assets/img/user-bg.png");
+    background-image: url("../../../../public/assets/img/user-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 24px;
     &:hover{
-        background-image: url("/assets/img/user-bg2.png");
+        background-image: url("../../../../public/assets/img/user-bg2.png");
         transition: 0.5s;
     }
 }
@@ -101,7 +101,7 @@
 }
 
 .marked{
-    background-image: url("/assets/img/nav-marker.png");
+    background-image: url("../../../../public/assets/img/nav-marker.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -115,11 +115,11 @@
     &_mail{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/mail-default.png");
+        background-image: url("../../../../public/assets/icons/mail-default.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/mail-hover.png");
+            background-image: url("../../../../public/assets/icons/mail-hover.png");
             transition: 0.5s;
         }
     }
@@ -127,11 +127,11 @@
     &_git{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/git-default.png");
+        background-image: url("../../../../public/assets/icons/git-default.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/git-hover.png");
+            background-image: url("../../../../public/assets/icons/git-hover.png");
             transition: 0.5s;
         }
     }
@@ -139,11 +139,11 @@
     &_linkedin{
         width: 32px;
         aspect-ratio: 1/1;
-        background-image: url("/assets/icons/linkedin-default.png");
+        background-image: url("../../../../public/assets/icons/linkedin-default.png");
         background-repeat: no-repeat;
         background-size: contain;
         &:hover{
-            background-image: url("/assets/icons/linkedin-hover.png");
+            background-image: url("../../../../public/assets/icons/linkedin-hover.png");
             transition: 0.5s;
         }
     }
