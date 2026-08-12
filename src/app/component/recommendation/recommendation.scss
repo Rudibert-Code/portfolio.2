@@ -22,6 +22,19 @@
     display: none;
 }
 
+.bg{
+    height: 320px;
+    width: auto;
+    background-image: url("/assets/img/interface-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &:hover{
+        background-image: url("/assets/img/interface-bg2.png");
+        transition: 0.5s;
+    }
+}
+
 .recommendation{
     &_base{
         display: flex;

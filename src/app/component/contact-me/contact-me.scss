@@ -147,12 +147,12 @@
 .checkbox{
     width: 24px;
     height: 24px;
-    background-image: url(/assets/icons/check-box.png);
+    background-image: url("/assets/icons/check-box.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     &:hover{
-        background-image: url(/assets/icons/check-box_hover.png);
+        background-image: url("/assets/icons/check-box_hover.png");
         transition: 0.5s;
     }
 }
@@ -160,7 +160,7 @@
 .clicked{
     width: 24px;
     height: 24px;
-    background-image: url(/assets/icons/check-box_clicked.png);
+    background-image: url("/assets/icons/check-box_clicked.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -168,7 +168,7 @@
 .error{
     width: 24px;
     height: 24px;
-    background-image: url(/assets/icons/check-box_error.png);
+    background-image: url("/assets/icons/check-box_error.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
