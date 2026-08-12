@@ -120,6 +120,15 @@
     }
 }
 
+.bg{
+    height: 380px;
+    aspect-ratio: 1 / 1;
+    background-image: url(../../../../public/assets/img/interface-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .small-font{
     font-size: 1rem;
     padding-left: 24px;
