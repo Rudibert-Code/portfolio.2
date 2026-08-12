@@ -2,7 +2,9 @@
 @use '../../../styles/typography';
 @use '../../../styles/basic';
 
-.component_bas{
+.component_base{
+    width: 100%;
+    height: calc(100vh - 104px);
     display: flex;
     justify-content: center;
     align-items: center;
