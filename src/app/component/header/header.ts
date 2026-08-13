@@ -44,11 +44,11 @@ export class Header {
     const burgerPopup = document.getElementById('overlay') as HTMLDivElement;
     const userImage = document.getElementById('user-img-mobile') as HTMLImageElement;
     if (popupOpen == true) {
-      userImage.style.opacity="1.0";
+      userImage.style.opacity = "1.0";
       popupOpen = false;
-      burgerPopup.style.display="none";
+      burgerPopup.style.display = "none";
     } else if (popupOpen == false){
-      userImage.style.opacity="0.0";
+      userImage.style.opacity = "0.0";
       popupOpen = true;
       burgerPopup.style.display = "flex";
     }
