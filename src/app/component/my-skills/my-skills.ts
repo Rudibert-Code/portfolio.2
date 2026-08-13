@@ -42,6 +42,10 @@ export class MySkills {
       img:'assets/icons/skill_scrum.png',
       name:'Scrum'
     },
+    {
+      img:'assets/icons/skill_supabase.png',
+      name:'Supabase'
+    },
   ]
   currentlyLearning:Skills[]=[
     {
