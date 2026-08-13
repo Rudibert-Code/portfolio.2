@@ -99,7 +99,7 @@ export class MyProjects {
         'assets/icons/skill_supabase.png'
       ],
       img:'assets/img/img_join.png',
-      link:'',
+      link:'https://bjoernsagmeister.developerakademie.net/angular-projects/join/login',
       git:'https://github.com/Rudibert-Code/join'
     },
   ]
