@@ -46,6 +46,18 @@ export class MySkills {
       img:'assets/icons/skill_supabase.png',
       name:'Supabase'
     },
+    {
+      img:'assets/icons/skill_photoshop.png',
+      name:'Photoshop'
+    },
+    {
+      img:'assets/icons/skill_spine.png',
+      name:'Spine2D'
+    },
+    {
+      img:'assets/icons/skill_blender.png',
+      name:'Blender'
+    },
   ]
   currentlyLearning:Skills[]=[
     {
