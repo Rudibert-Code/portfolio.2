@@ -18,6 +18,7 @@ export class Header {
 
   ngOnInit(){
     let selectedLanguageID = String(localStorage.getItem("language"));
+    this.markedLanguage(selectedLanguageID);
     this.changeLanguage(selectedLanguageID);
   }
 
