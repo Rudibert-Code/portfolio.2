@@ -61,9 +61,11 @@ export class Header {
     DE.classList.remove('marked');
     EN.classList.remove('marked');
     selected.classList.add('marked');
+    this.changeLanguage(ID);
   }
 
   changeLanguage(languageID:string){
+    localStorage.setItem("language", languageID);
     switch (languageID) {
       case 'DE':
         this.languageCache = Language.DE;
@@ -77,5 +79,7 @@ export class Header {
         this.languageCache = Language.EN;
         break;
     }
+    let selectedLanguage = JSON.stringify(this.languageCache)
+    localStorage.setItem("test", selectedLanguage);
   }
 }
