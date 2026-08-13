@@ -147,7 +147,7 @@
 
 .checkbox{
     width: 24px;
-    height: 24px;
+    aspect-ratio: 1/1;
     background-image: url("../../../../public/assets/icons/check-box.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -305,5 +305,23 @@
         &_small{
             display: flex;
         }
+    }
+}
+
+@media(max-width:340px){
+    .policy{
+        width: 100%;
+    }
+
+        .input{
+        &_area{
+            width: 100%;
+            max-width: 524px;
+        }
+     
+    }
+
+    .contact_footer{
+        width: 100%;
     }
 }

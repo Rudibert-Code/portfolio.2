@@ -1,6 +1,6 @@
 <section id="recommendations">
     <h2 class="color_primary only_mobile"> {{ languageCache.recommendations[0] }} </h2>
-    <p class="only_mobile" [style.padding-bottom.px]="24"> {{ languageCache.recommendations[1] }} </p>
+    <p class="subheadline only_mobile" [style.padding-bottom.px]="24"> {{ languageCache.recommendations[1] }} </p>
     <p class="color_primary only_desktop"> {{ languageCache.recommendations[0] }}   {{ languageCache.recommendations[1] }} </p>
     <div class="recommendation_list" id="recommendation-list">
         @for (reco of myRecommendation; track $index) {

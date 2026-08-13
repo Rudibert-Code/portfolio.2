@@ -62,9 +62,14 @@
             gap: 32px;
             overflow-x: scroll;
 
+            //scroll-margin-inline-start: 1000px;
+
             &::-webkit-scrollbar {
                 display: none;
             }
         }
+    }
+    .subheadline{
+        font-size: 1.1rem;
     }
 }
