@@ -100,7 +100,7 @@ export class MyProjects {
       ],
       img:'assets/img/img_join.png',
       link:'',
-      git:''
+      git:'https://github.com/Rudibert-Code/join'
     },
   ]
 
