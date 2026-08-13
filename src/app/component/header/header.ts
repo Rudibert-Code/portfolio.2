@@ -57,11 +57,27 @@ export class Header {
   markedLanguage(ID:string){
     const DE = document.getElementById('overlay-DE') as HTMLDivElement;
     const EN = document.getElementById('overlay-EN') as HTMLDivElement;
-    let selected = document.getElementById(ID) as HTMLDivElement;
     DE.classList.remove('marked');
     EN.classList.remove('marked');
-    selected.classList.add('marked');
+    this.setMark(ID);
     this.changeLanguage(ID);
+  }
+
+  setMark(ID:string){
+    switch (ID) {
+      case 'DE':
+        let selectedDE = document.getElementById('overlay-DE') as HTMLDivElement;
+        selectedDE.classList.add('marked');
+        break;
+      case 'EN':
+        let selectedEN = document.getElementById('overlay-EN') as HTMLDivElement;
+        selectedEN.classList.add('marked');
+        break;
+      default:
+        let selectedDefault = document.getElementById('overlay-EN') as HTMLDivElement;
+        selectedDefault.classList.add('marked');
+        break;
+    }
   }
 
   changeLanguage(languageID:string){
