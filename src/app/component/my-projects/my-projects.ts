@@ -106,7 +106,6 @@ export class MyProjects {
 
   @HostListener('document:click', ['$event'])
     closeMenu(event: MouseEvent){
-      console.log("listener works")
       this.ngOnInit();
     }
 
