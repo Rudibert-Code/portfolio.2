@@ -30,7 +30,7 @@ export class Header {
     const menu = document.getElementById('burger-menu') as HTMLImageElement;
     const clickedElement = event.target as HTMLElement;
 
-    if (popupOpen && clickedElement != overlay && clickedElement != menu && !overlay.contains(clickedElement)) {
+    if (popupOpen && clickedElement != overlay && clickedElement != menu) {
       return this.toggleMenu()
     } else{
       return
