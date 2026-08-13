@@ -186,3 +186,17 @@
         }
     }
 }
+
+@media (min-width:320px){
+    .shape{
+        &_bg{
+            border-radius: 0;
+        }
+        &_bg-alt-neutral{
+            border-radius: 0;   
+        }
+        &_bg-alt-back{
+            border-radius: 0;  
+        }
+    }
+}
