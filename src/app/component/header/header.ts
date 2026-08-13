@@ -42,12 +42,15 @@ export class Header {
 
   toggleMenu(){
     const burgerPopup = document.getElementById('overlay') as HTMLDivElement;
+    const userImage = document.getElementById('user-img-mobile') as HTMLImageElement;
     if (popupOpen == true) {
-      burgerPopup.style.display = "none";
+      burgerPopup.style.opacity="1.0";
       popupOpen = false;
+      userImage.style.display="flex";
     } else{
       burgerPopup.style.display = "flex";
       popupOpen = true;
+      burgerPopup.style.opacity="0.0";
     }
   }
 
