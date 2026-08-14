@@ -120,7 +120,7 @@ export class ContactMe {
 
   checkInputState(inputArea:string){
     let targetInputArea = document.getElementById(inputArea) as HTMLElement;
-    targetInputArea.classList.remove("input_error");
+    targetInputArea.style.opacity = "0.0";
 
     switch (inputArea) {
       case 'input-name':
