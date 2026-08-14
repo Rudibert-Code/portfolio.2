@@ -63,22 +63,24 @@ export class ContactMe {
   }
 
   markIncompletion(){
-    let userName = document.getElementById('input-name') as HTMLInputElement;
-    let userEmail = document.getElementById('input-email') as HTMLInputElement;
-    let userMessage = document.getElementById('input-text') as HTMLTextAreaElement;
+    //let userName = document.getElementById('input-name') as HTMLInputElement;
+    //let userEmail = document.getElementById('input-email') as HTMLInputElement;
+    //let userMessage = document.getElementById('input-text') as HTMLTextAreaElement;
     let checkboxState = document.getElementById('checkbox') as HTMLDivElement;
 
+    let userName = document.getElementById('reminder_name') as HTMLParagraphElement;
+
     if (this.newUser[0].name == "") {
-      userName.classList.add("input_error");
-      userName.value= String(this.languageCache.contact[10]);  
+      //userName.classList.add("input_error");
+      //userName.value= String(this.languageCache.contact[10]);  
     }
     if (this.newUser[0].email == "") {
-      userEmail.classList.add("input_error");
-      userEmail.value= String(this.languageCache.contact[11]);  
+      //userEmail.classList.add("input_error");
+      //userEmail.value= String(this.languageCache.contact[11]);  
     }
     if (this.newUser[0].message == "") {
-      userMessage.classList.add("input_error");
-      userMessage.value= String(this.languageCache.contact[12]);  
+      //userMessage.classList.add("input_error");
+      //userMessage.value= String(this.languageCache.contact[12]);  
     }
     if (this.newUser[0].checkbox == false) {
       checkboxState.classList.add("error");  
