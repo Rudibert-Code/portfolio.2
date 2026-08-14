@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.extra-wide{
+    display: none;
+}
+
 .screen{
     &_mobile{
         width: 100%;
@@ -173,6 +177,13 @@
 }
 
 @media (min-width:2000px){
+    .extra-wide{
+        height: 560px;
+        display: flex;
+    }
+    .user-img{
+        display: none;
+    }
     .screen{
         &_desktop{
             align-items: center;
