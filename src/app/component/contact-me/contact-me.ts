@@ -82,6 +82,37 @@ export class ContactMe {
     }
   }
 
+  checkSingleInput(ID:string){ 
+    switch (ID) {
+      case 'reminder_name':
+        this.markInput(1)
+        break;
+      case 'reminder_email':
+        this.markInput(2)
+        break;
+      case 'reminder_message':
+        this.markInput(3)
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  markInput(ID:number){
+    let errorName = document.getElementById('reminder_name') as HTMLInputElement;
+    let errorEmail = document.getElementById('reminder_email') as HTMLInputElement;
+    let errorMessage = document.getElementById('reminder_message') as HTMLInputElement;
+
+    if (ID == 1 && !this.isNameEntered(document.getElementById('input-name') as HTMLInputElement)) {
+      errorName.style.opacity = "1.0";
+    } else if (ID == 2 && !this.isEmailEntered(document.getElementById('input-email') as HTMLInputElement)) {
+      errorEmail.style.opacity = "1.0";
+    } else if (ID == 3 && !this.isMessageEntered(document.getElementById('input-text') as HTMLTextAreaElement)) {
+      errorMessage.style.opacity = "1.0";
+    }
+  }
+
   checkFormCompletion(){
     let sendButton = document.getElementById('send-button') as HTMLAnchorElement;
 
@@ -97,24 +128,30 @@ export class ContactMe {
   isNameEntered(userName:HTMLInputElement){
     if (userName.value.length >= 3 && !userName.value.includes("Your name") && !userName.value.includes("Your name is required")) {
       this.newUser[0].name = userName.value;
+      return true;
     } else{
       this.newUser[0].name = "";
+      return false;
     }
   }
 
   isEmailEntered(userEmail:HTMLInputElement){
     if (userEmail.value.length >= 5 && userEmail.value.includes("@") && userEmail.value.includes(".")) {
       this.newUser[0].email = userEmail.value;
+      return true;
     } else{
       this.newUser[0].email = "";
+      return false;
     }
   }
 
   isMessageEntered(userMessage:HTMLTextAreaElement){
     if (userMessage.value.length !== 0) {
       this.newUser[0].message = userMessage.value;
+      return true;
     } else{
       this.newUser[0].message = "";
+      return false;
     }
   }
 
