@@ -95,7 +95,7 @@ export class ContactMe {
   }
 
   isNameEntered(userName:HTMLInputElement){
-    if (userName.value.length >= 3 && !userName.value.includes("     Your name") && !userName.value.includes("     Your name is required")) {
+    if (userName.value.length >= 3 && !userName.value.includes("Your name") && !userName.value.includes("Your name is required")) {
       this.newUser[0].name = userName.value;
     } else{
       this.newUser[0].name = "";
