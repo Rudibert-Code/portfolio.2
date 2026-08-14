@@ -26,21 +26,21 @@
     <form class="input" action="mailto:bjoernsagmeisterdev@gmail.com" method="post" enctype="text/plain" id="form">
         <div class="input_base">
             <div class="input" id="contact_name">
-                <input (keyup)="checkInputState('reminder_name')" (change)=" checkSingleInput('reminder_name')" class="input_area" type="text" placeholder=" {{ languageCache.contact[3] }} " name="name" value="" id="input-name">
+                <input (keyup)="checkInputState('reminder_name')" (change)="checkSingleInput('reminder_name')" class="input_area" type="text" placeholder=" {{ languageCache.contact[3] }} " name="name" value="" id="input-name">
                 <div class="user-message" id="reminder_name">
                     <p> {{ languageCache.contact[10] }} </p>
                 </div>
             </div>
             <div class="input" id="contact_email">
-                <input (keyup)="checkInputState('reminder_email')" (change)=" checkSingleInput('reminder_email')" class="input_area" type="text" placeholder=" {{ languageCache.contact[4] }} " value="" id="input-email">
+                <input (keyup)="checkInputState('reminder_email')" (change)="checkSingleInput('reminder_email')" class="input_area" type="text" placeholder=" {{ languageCache.contact[4] }} " value="" id="input-email">
                 <div class="user-message" id="reminder_email">
-                    <p> {{ languageCache.contact[11] }} </p>
+                    <p class="message-error_email"> {{ languageCache.contact[11] }} </p>
                 </div>
             </div>
         </div>
-        <textarea (keyup)="checkInputState('reminder_message')" (change)=" checkSingleInput('reminder_message')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder=" {{ languageCache.contact[5] }} " rows="4" id="input-text"></textarea>
+        <textarea (keyup)="checkInputState('reminder_message')" (change)="checkSingleInput('reminder_message')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder=" {{ languageCache.contact[5] }} " rows="4" id="input-text"></textarea>
         <div class="user-message" id="reminder_message">
-            <p [style.margin-top.px]="8"> {{ languageCache.contact[12] }} </p>
+            <p class="message-error_text" [style.margin-top.px]="8"> {{ languageCache.contact[12] }} </p>
         </div>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>

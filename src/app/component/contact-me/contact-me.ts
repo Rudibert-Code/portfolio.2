@@ -93,7 +93,6 @@ export class ContactMe {
       case 'reminder_message':
         this.markInput(3)
         break;
-    
       default:
         break;
     }
@@ -136,7 +135,7 @@ export class ContactMe {
   }
 
   isEmailEntered(userEmail:HTMLInputElement){
-    if (userEmail.value.length >= 5 && userEmail.value.includes("@") && userEmail.value.includes(".")) {
+    if (userEmail.value.length >= 5 && userEmail.value.includes("@") && userEmail.value.includes(".") && userEmail.value.charAt((userEmail.value.length) - 1) != ".") {
       this.newUser[0].email = userEmail.value;
       return true;
     } else{
@@ -158,7 +157,6 @@ export class ContactMe {
   checkInputState(inputArea:string){
     let targetInputArea = document.getElementById(inputArea) as HTMLElement;
     targetInputArea.style.opacity = "0.0";
-
     switch (inputArea) {
       case 'reminder_name':
         this.isNameEntered(document.getElementById('input-name') as HTMLInputElement);
@@ -172,7 +170,6 @@ export class ContactMe {
       default:
         break;
     }
-
     this.checkFormCompletion();
   }
 
