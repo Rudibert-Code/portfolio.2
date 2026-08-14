@@ -69,16 +69,21 @@ export class ContactMe {
     let checkboxState = document.getElementById('checkbox') as HTMLDivElement;
 
     let userName = document.getElementById('reminder_name') as HTMLParagraphElement;
+    let userEmail = document.getElementById('reminder_email') as HTMLParagraphElement;
+    let userMessage = document.getElementById('reminder_message') as HTMLParagraphElement;
 
     if (this.newUser[0].name == "") {
+      userName.style.opacity = "1.0"
       //userName.classList.add("input_error");
       //userName.value= String(this.languageCache.contact[10]);  
     }
     if (this.newUser[0].email == "") {
+      userEmail.style.opacity = "1.0"
       //userEmail.classList.add("input_error");
       //userEmail.value= String(this.languageCache.contact[11]);  
     }
     if (this.newUser[0].message == "") {
+      userMessage.style.opacity = "1.0"
       //userMessage.classList.add("input_error");
       //userMessage.value= String(this.languageCache.contact[12]);  
     }

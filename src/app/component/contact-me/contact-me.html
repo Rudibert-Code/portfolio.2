@@ -27,22 +27,21 @@
         <div class="input_base">
             <div class="input" id="contact_name">
                 <input (keyup)="checkInputState('input-name')" class="input_area" type="text" placeholder=" {{ languageCache.contact[3] }} " name="name" value="" id="input-name">
-                <div class="user-message">
-                    <p id="reminder_name"> {{ languageCache.contact[10] }} </p>
+                <div class="user-message" id="reminder_name">
+                    <p> {{ languageCache.contact[10] }} </p>
                 </div>
             </div>
             <div class="input" id="contact_email">
                 <input (keyup)="checkInputState('input-email')" class="input_area" type="text" placeholder=" {{ languageCache.contact[4] }} " value="" id="input-email">
-                <div class="user-message">
-                    <p id="reminder_email"> {{ languageCache.contact[11] }} </p>
+                <div class="user-message" id="reminder_email">
+                    <p> {{ languageCache.contact[11] }} </p>
                 </div>
             </div>
         </div>
         <textarea (keyup)="checkInputState('input-text')" class="input_area" [style.border-radius.px]="25" type="text" name="message" placeholder=" {{ languageCache.contact[5] }} " rows="4" id="input-text"></textarea>
-        <div class="user-message">
+        <div class="user-message" id="reminder_message">
             <p [style.margin-top.px]="8" id="reminder_message"> {{ languageCache.contact[12] }} </p>
         </div>
-        <p class="user-message" id="reminder_message"></p>
         <div class="policy">
             <div (click)="checkbox('clicked')" class="btn checkbox" id="checkbox"></div>
             <p class="visible_normal"> {{ languageCache.contact[6] }} <a [routerLink]="['/privacy']" class="color_primary visible_normal"> {{ languageCache.contact[7] }} </a>  {{ languageCache.contact[8] }} </p>

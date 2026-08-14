@@ -64,7 +64,7 @@
 }
 
 .user-message{
-    //opacity: 0.0;
+    opacity: 0.0;
     width: calc(100% - 152px);
     >p{
     font-family: JosefinSans;
@@ -147,6 +147,7 @@
     justify-content: start;
     align-items: center;
     gap: 8px;
+    margin-top: 24px;
     >p{
         margin: 0;
     }
