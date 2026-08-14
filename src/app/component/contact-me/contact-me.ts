@@ -135,7 +135,7 @@ export class ContactMe {
   }
 
   isEmailEntered(userEmail:HTMLInputElement){
-    if (userEmail.value.length >= 5 && userEmail.value.includes("@") && userEmail.value.includes(".") && userEmail.value.charAt((userEmail.value.length) - 1) != ".") {
+    if (userEmail.value.length >= 5 && userEmail.value.includes("@") && userEmail.value.includes(".") && userEmail.value.charAt((userEmail.value.length) - 1) != "." && userEmail.value.charAt((userEmail.value.length) - 2) != ".") {
       this.newUser[0].email = userEmail.value;
       return true;
     } else{
