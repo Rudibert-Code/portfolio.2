@@ -123,14 +123,14 @@ export class ContactMe {
     targetInputArea.style.opacity = "0.0";
 
     switch (inputArea) {
-      case 'input-name':
-        this.isNameEntered(document.getElementById(inputArea) as HTMLInputElement);
+      case 'reminder_name':
+        this.isNameEntered(document.getElementById('input-name') as HTMLInputElement);
         break;
-      case 'input-email':
-        this.isEmailEntered(document.getElementById(inputArea) as HTMLInputElement);
+      case 'reminder_email':
+        this.isEmailEntered(document.getElementById('input-email') as HTMLInputElement);
         break;
-      case 'input-text':
-        this.isMessageEntered(document.getElementById(inputArea) as HTMLTextAreaElement);
+      case 'reminder_message':
+        this.isMessageEntered(document.getElementById('input-text') as HTMLTextAreaElement);
         break;
       default:
         break;
