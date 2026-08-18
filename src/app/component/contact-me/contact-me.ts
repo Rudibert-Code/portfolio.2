@@ -214,9 +214,7 @@ export class ContactMe {
   if (!this.newUser[0].name || !this.newUser[0].email || !this.newUser[0].message || !this.newUser[0].checkbox) {
     this.markIncompletion();
     return;
-  }
-
-  try {
+  } try {
     const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.php', {
       method: 'POST',
       headers: {
