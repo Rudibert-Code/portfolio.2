@@ -16,9 +16,17 @@ export class NavBar {
   languageCache = Language.DE;
 
   ngOnInit(){
+    this.firstOpen();
     let selectedLanguageID = String(localStorage.getItem("language"));
     this.changeLanguage(selectedLanguageID);
     this.markElement(selectedLanguageID,'lan');
+  }
+
+  firstOpen(){
+    let startingLanguage = String(localStorage.getItem("language"));
+    if (startingLanguage != "DE" && startingLanguage != "EN") {
+      localStorage.setItem("language", "DE");
+    }
   }
 
   // markiert Navigationselement ...
@@ -70,15 +78,11 @@ export class NavBar {
         this.languageCache = Language.EN;
         break;
 
-      case 'null':
-        this.languageCache = Language.EN;
-        break;
-        
       default:
         this.languageCache = Language.EN;
         break;
     }
-    let selectedLanguage = JSON.stringify(this.languageCache)
-    localStorage.setItem("test", selectedLanguage);
+    //let selectedLanguage = JSON.stringify(this.languageCache)
+    //localStorage.setItem("test", selectedLanguage);
   }
 }
