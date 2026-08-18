@@ -69,7 +69,11 @@ export class NavBar {
       case 'EN':
         this.languageCache = Language.EN;
         break;
-      
+
+      case 'null':
+        this.languageCache = Language.EN;
+        break;
+        
       default:
         this.languageCache = Language.EN;
         break;
