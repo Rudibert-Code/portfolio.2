@@ -9,6 +9,25 @@ interface User{
   checkbox:boolean
 }
 
+
+// fetch fetch PHP script from domain
+const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.php', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'Max Mustermann',
+    email: 'max@example.com',
+    message: 'Hallo, ich möchte Kontakt aufnehmen.'
+  })
+});
+
+const data = await response.json();
+console.log(data);
+
+
+
 @Component({
   selector: 'app-contact-me',
   imports: [RouterLink],
@@ -53,14 +72,14 @@ export class ContactMe {
     }
   }
 
-  sendEmail(){
-    if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
-      let form = document.getElementById('form') as HTMLFormElement;
-      form.submit();
-    } else{
-      this.markIncompletion();
-    }
-  }
+  //sendEmail(){
+  //  if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
+  //    let form = document.getElementById('form') as HTMLFormElement;
+  //    form.submit();
+  //  } else{
+  //    this.markIncompletion();
+  //  }
+  //}
 
   markIncompletion(){
     let checkboxState = document.getElementById('checkbox') as HTMLDivElement;
@@ -187,4 +206,45 @@ export class ContactMe {
 
     this.checkFormCompletion()
   }
+
+
+
+
+  async sendEmail(): Promise<void> {
+  if (!this.newUser[0].name || !this.newUser[0].email || !this.newUser[0].message || !this.newUser[0].checkbox) {
+    this.markIncompletion();
+    return;
+  }
+
+  try {
+    const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: this.newUser[0].name,
+        email: this.newUser[0].email,
+        message: this.newUser[0].message
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      console.error('Mail error:', data);
+      alert('Message could not be sent.');
+      return;
+    }
+
+    alert('Message sent successfully!');
+  } catch (error) {
+    console.error('Request failed:', error);
+    alert('Network error. Please try again.');
+  }
 }
+}
+
+
+
+
