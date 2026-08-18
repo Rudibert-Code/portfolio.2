@@ -9,9 +9,8 @@ interface User{
   checkbox:boolean
 }
 
-
 // fetch fetch PHP script from domain
-const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.php', {
+const response = await fetch('https://bjoernsagmeisterdev.de/portfolio/contact-form-email.php', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -19,14 +18,9 @@ const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.
   body: JSON.stringify({
     name: 'Max Mustermann',
     email: 'max@example.com',
-    message: 'Hallo, ich möchte Kontakt aufnehmen.'
+    message: '...'
   })
 });
-
-const data = await response.json();
-console.log(data);
-
-
 
 @Component({
   selector: 'app-contact-me',
@@ -72,14 +66,14 @@ export class ContactMe {
     }
   }
 
-  sendEmail(){
-    if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
-      let form = document.getElementById('form') as HTMLFormElement;
-      form.submit();
-    } else{
-      this.markIncompletion();
-    }
-  }
+  //sendEmail(){
+  //  if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
+  //    let form = document.getElementById('form') as HTMLFormElement;
+  //    form.submit();
+  //  } else{
+  //    this.markIncompletion();
+  //  }
+  //}
 
   markIncompletion(){
     let checkboxState = document.getElementById('checkbox') as HTMLDivElement;
@@ -207,15 +201,12 @@ export class ContactMe {
     this.checkFormCompletion()
   }
 
-
-
-
   async sendEmailForm(): Promise<void> {
   if (!this.newUser[0].name || !this.newUser[0].email || !this.newUser[0].message || !this.newUser[0].checkbox) {
     this.markIncompletion();
     return;
   } try {
-    const response = await fetch('https://bjoernsagmeisterdev.de/contact-form-email.php', {
+    const response = await fetch('https://bjoernsagmeisterdev.de/portfolio/contact-form-email.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
