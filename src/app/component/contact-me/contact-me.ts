@@ -72,14 +72,14 @@ export class ContactMe {
     }
   }
 
-  //sendEmail(){
-  //  if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
-  //    let form = document.getElementById('form') as HTMLFormElement;
-  //    form.submit();
-  //  } else{
-  //    this.markIncompletion();
-  //  }
-  //}
+  sendEmail(){
+    if (this.newUser[0].name && this.newUser[0].email && this.newUser[0].message && this.newUser[0].checkbox) {
+      let form = document.getElementById('form') as HTMLFormElement;
+      form.submit();
+    } else{
+      this.markIncompletion();
+    }
+  }
 
   markIncompletion(){
     let checkboxState = document.getElementById('checkbox') as HTMLDivElement;
@@ -210,7 +210,7 @@ export class ContactMe {
 
 
 
-  async sendEmail(): Promise<void> {
+  async sendEmailForm(): Promise<void> {
   if (!this.newUser[0].name || !this.newUser[0].email || !this.newUser[0].message || !this.newUser[0].checkbox) {
     this.markIncompletion();
     return;
