@@ -100,4 +100,14 @@
     .bg{
         height: 148px;
     }
+
+    .container{
+        width: calc(100% - 64px);
+    }
+
+    .alignment{
+        &_left{
+            padding-left: 0;
+        }
+    }
 }
