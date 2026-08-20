@@ -42,7 +42,7 @@ export class MyProjects {
         'assets/icons/skill_git.png'
       ],
       img:'assets/img/p1.jpg',
-      link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
+      link:'https://bjoernsagmeisterdev.de/jump-n-run/',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
   ]
@@ -69,7 +69,7 @@ export class MyProjects {
         'assets/icons/skill_git.png'
       ],
       img:'assets/img/p1.jpg',
-      link:'https://bjoernsagmeister.developerakademie.net/jump-n-run',
+      link:'https://bjoernsagmeisterdev.de/jump-n-run/',
       git:'https://github.com/Rudibert-Code/jump-n-run.git'
     },
     {
@@ -83,7 +83,7 @@ export class MyProjects {
         'assets/icons/skill_git.png'
       ],
       img:'assets/img/p2.jpg',
-      link:'https://bjoernsagmeister.developerakademie.net/modul8_pokedex/',
+      link:'https://bjoernsagmeisterdev.de/pokedex/',
       git:'https://github.com/Rudibert-Code/modul8_pokedex'
     },
     {
@@ -99,7 +99,7 @@ export class MyProjects {
         'assets/icons/skill_supabase.png'
       ],
       img:'assets/img/p3.jpg',
-      link:'https://bjoernsagmeister.developerakademie.net/angular-projects/join/login',
+      link:'https://bjoernsagmeisterdev.de/join/',
       git:'https://github.com/Rudibert-Code/join'
     },
   ]
