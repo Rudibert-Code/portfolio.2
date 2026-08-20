@@ -9,7 +9,7 @@
         </div>
         <div class="shape_bg column" id="project-bg">
             <div class="project-base">
-                <div class="column">
+                <div class="column mobile-width">
                     <div class="project-techlist">
                         <h2 class="color_primary only_mobile">  {{ currentProject[0].name }} </h2>
                         <div class="project-row">
@@ -35,25 +35,25 @@
                             <img src="assets/img/project-detail.png" alt="">
                             <h3 class="no_margin">{{ languageCache.projetcs[4] }}</h3>
                         </div>
-                        <span> {{ currentProjectDesc[0].about }} </span>
+                        <span class="mobile-alignment"> {{ currentProjectDesc[0].about }} </span>
                     </div>
                     <div class="project-details" id="container_how">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
                             <h3 class="no_margin">{{ languageCache.projetcs[5] }}</h3>
                         </div>
-                        <span> {{ currentProjectDesc[0].organization }} </span>
+                        <span class="mobile-alignment"> {{ currentProjectDesc[0].organization }} </span>
                     </div>
                     <div class="project-details" id="container_exp">
                         <div class="row" [style.gap.px]="8">
                             <img src="assets/img/project-detail.png" alt="">
                             <h3 class="no_margin">{{ languageCache.projetcs[6] }}</h3>
                         </div>
-                        <span> {{ currentProjectDesc[0].experience }} </span>
+                        <span class="mobile-alignment"> {{ currentProjectDesc[0].experience }} </span>
                     </div>
                 </div>
             </div>
-            <div class="row only_mobile" [style.gap.px]="32">
+            <div class="button-row only_mobile" [style.gap.px]="32">
                 <a class="button-base-alt size_button" (click)="openWindow( currentProject[0].link  )" href="" target="_blank" id="live-test">{{ languageCache.projetcs[3] }}</a>
                 <a class="button-base size_button" (click)="openWindow( currentProject[0].git )" href="" target="_blank" id="live-github">GitHub</a>
             </div>

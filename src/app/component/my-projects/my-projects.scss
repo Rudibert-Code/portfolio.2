@@ -17,6 +17,11 @@
     }
 }
 
+.button-row{
+    justify-content: center;
+    align-items: center;
+}
+
 .project-base{
     width: 100%;
     max-width: 1440px;
@@ -67,7 +72,7 @@
     justify-content: center;
     align-items: start;
     gap: 16px;
-    padding-left: 24px;
+    padding-left: 0;
     padding-bottom: 24px;
 }
 
@@ -180,7 +185,7 @@
     }
 }
 
-@media(max-width: 2000px){
+@media(max-width: 5000px){
     .project-row{
         flex-direction: row;
         justify-content: center;
@@ -189,47 +194,51 @@
 }
 
 @media(max-width:1100px){
-.shape{
-    &_bg{
-        width: 100%;
-        border-radius: 0 50px 50px 50px;
-        background-color: $overlay;
-        gap: 24px;
-        padding: 24px 0;
-    }
-    &_bg-alt-neutral{
-        width: 100%;
-        border-radius: 50px;
-        background-color: $overlay; 
-        gap: 24px;
-        padding: 24px 0;   
-    }
-    &_bg-alt-back{
-        width: 100%;
-        border-radius: 50px 0 50px 50px;
-        background-color: $overlay;
-        gap: 24px;
-        padding: 24px 0;    
-    }
-    &_lable{
-        min-width: 50px;
-        border-radius: 20px 20px 0 0;
-        background-color: $background;
-        color: $primary;
-        padding: 16px;
-        margin: 0;
-        &:hover{
-            color: $secondary;
+    .shape{
+        &_bg{
+            width: 100%;
+            border-radius: 0 50px 50px 50px;
+            background-color: $overlay;
+            gap: 24px;
+            padding: 24px 0;
+        }
+        &_bg-alt-neutral{
+            width: 100%;
+            border-radius: 50px;
+            background-color: $overlay; 
+            gap: 24px;
+            padding: 24px 0;   
+        }
+        &_bg-alt-back{
+            width: 100%;
+            border-radius: 50px 0 50px 50px;
+            background-color: $overlay;
+            gap: 24px;
+            padding: 24px 0;    
+        }
+        &_lable{
+            min-width: 50px;
+            border-radius: 20px 20px 0 0;
+            background-color: $background;
+            color: $primary;
+            padding: 16px;
+            margin: 0;
+            &:hover{
+                color: $secondary;
+            }
         }
     }
-}
-}
 
-@media(max-width: 500px){
+    .mobile-alignment{
+       text-align: left;
+    }
+
+    .mobile-width{
+        width: 100%;
+    }
+
     .project-row{
         display: flex;
-        flex-direction: row;
-        justify-content: start;
         align-items: center;
     }
 }
@@ -246,5 +255,9 @@
         justify-content: center;
         align-items: start;
         padding-bottom: 16px;
+    }
+
+    .button-row{
+        width: calc(100% - 64px);
     }
 }

@@ -23,7 +23,7 @@
 }
 
 .bg{
-    height: 380px;
+    height: 320px;
     aspect-ratio: 1 / 1;
     background-image: url("../../../../public/assets/img/interface-bg.png");
     background-repeat: no-repeat;
@@ -70,6 +70,7 @@
         }
     }
     .subheadline{
+        width: calc(100% - 64px);
         font-size: 1.1rem;
     }
 }
