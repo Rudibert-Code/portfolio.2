@@ -338,10 +338,11 @@
 
 @media(max-width:340px){
     .policy{
-        width: 100%;
+        width: calc(100% - 64px);
     }
 
     .contact_footer{
-        width: 100%;
+        width: calc(100% - 64px);
+        padding-bottom: 32px;
     }
 }
