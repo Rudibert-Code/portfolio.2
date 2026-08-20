@@ -225,24 +225,11 @@ export class MyProjects {
       targetLableDesktop.style.color = "#89BCD9";
     }
   }
-
-  calculateCombinedLableWidth(){
-    let combinedWidth:number = 0;
-    for (let index = 0; index < this.myProjects.length; index++) {
-      let currentLable = document.getElementById("pro"+this.myProjects[index].number) as HTMLParagraphElement;
-      combinedWidth += Number(currentLable.offsetWidth + 48);
-    }
-    if (combinedWidth >= window.innerWidth-24 ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
+  
   adjustProjectBG(number:number){
     let bg = document.getElementById('project-bg') as HTMLDialogElement;
     if (number != 1) {
-      if(number == this.myProjects.length && window.innerWidth <= 400 && this.calculateCombinedLableWidth()){
+      if(number == this.myProjects.length && window.innerWidth <= 1100){
         bg.classList.add('shape_bg-alt-back');
       } else{
         bg.classList.remove('shape_bg-alt-back');
