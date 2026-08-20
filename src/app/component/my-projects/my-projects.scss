@@ -202,8 +202,35 @@
     }
 }
 
+@media(max-width: 2000px){
+    .project-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+    .project-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
 @media(max-width: 340px){
     #quicklinks{
         width: calc(100% - 64px);
+    }   
+    
+    .project-row{
+        width: calc(100% - 64px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-bottom: 16px;
     }
 }
