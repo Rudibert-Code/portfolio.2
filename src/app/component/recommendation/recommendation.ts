@@ -19,31 +19,31 @@ interface Recommendations{
 export class Recommendation {
   header = inject(Header);
 
+  languageCache = Language.DE;
+
   myRecommendation:Recommendations[]=[
     {
       name:"Felix Winkler",
       ID:0,
       project:" Join",
-      text:'"Björn is my daily dedicated study partner. His approach might be a bit unconventional, but he is exceptionally skilled and an absolute asset to any Team."',
+      text:'FWinkler',
       linkedin:"https://www.linkedin.com/in/felix-winkler-38947a365/"
     },
     {
       name:"Waldemar Chorow",
       ID:1,
       project:" Kochwelt",
-      text:'"Björn ist ein echter Gewinn für jedes Entwicklerteam! Wir haben zusammen die Rezepte-Plattform Kochwelt entwickelt, und Björn hat von Anfang an dafür gesorgt, dass der Teamgeist an erster Stelle steht. Durch seine offene, kommunikative und enthusiastische Art hat er eine tolle Arbeitsatmosphäre geschaffen und das Projekt fachlich wie menschlich extrem bereichert. Er hatte immer das klare Ziel vor Augen, die Aufgaben strukturiert und mit einem sehr guten Ergebnis abzuschließen. Dabei war er ausnahmslos freundlich und stand jedem immer hilfsbereit zur Seite. Die Zusammenarbeit mit ihm hat großen Spaß gemacht. Eine klare Empfehlung, jederzeit wieder gerne."',
+      text:'WChorow',
       linkedin:"https://www.linkedin.com/in/waldemar-chorow-11460a31b/?skipRedirect=true"
     },
     {
       name:"Jana Schaaf",
       ID:2,
       project:" Join",
-      text:'"Working with Björn was a great experience. He is the kind of teammate who approaches every challenge with curiosity and determination. Whenever a problem came up, he was always ready to look for a solution instead of waiting for someone else to solve it. Beyond his technical skills, Björn shared his knowledge, supported the team, and kept the mood positive with his sense of humor. I would happily work with him again and recommend him to any team."',
+      text:'JSchaaf',
       linkedin:""
     },
   ]
-
-  languageCache = Language.DE;
 
   @HostListener('document:click', ['$event'])
     closeMenu(event: MouseEvent){
@@ -79,6 +79,14 @@ export class Recommendation {
           quickLink.classList.add("hidden");
         } 
       }
+      this.getRecomText();
     },0)
+  }
+
+  getRecomText(){
+    for (let index = 0; index < this.myRecommendation.length; index++) {
+      let teargetRecom = document.getElementById(String(this.myRecommendation[index].text)) as HTMLSpanElement;
+      teargetRecom.innerHTML = this.languageCache.recommendations[Number(index + 2)];
+    }
   }
 }
