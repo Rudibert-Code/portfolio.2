@@ -65,7 +65,9 @@
             "Senden",
             "Es sind mindestens 3 Zeichen erforderlich",
             "@  . und eine Domain-Endung sind erforderlich",
-            "Hinterlassen Sie eine Nachricht"
+            "Hinterlassen Sie eine Nachricht",
+            "Die Nachricht konnte nicht gesendet werden",
+            "Die Nachricht wurde erfolgreich gesendet!"
         ],
         "footer":"Rechtliche Hinweise",
         "legalnotice":[
@@ -163,7 +165,9 @@
             "Send",
             "At least 3 characters are required",
             "@  .  and a domain extension are required",
-            "Your message is required"
+            "Your message is required",
+            "Message could not be sent",
+            "Message sent successfully!"
         ],
         "footer":"Legal Notice",
         "legalnotice":[
