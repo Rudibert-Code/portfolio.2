@@ -201,10 +201,12 @@ export class ContactMe {
 
     if (!response.ok || !data.success) {
       console.error('Mail error:', data);
-      alert('Message could not be sent.');
+      console.log("message NOT send");
+      //alert('Message could not be sent.');
       return;
     }
 
+    console.log("message send");
     alert('Message sent successfully!');
   } catch (error) {
     console.error('Request failed:', error);
