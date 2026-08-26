@@ -5,13 +5,13 @@
 .user-message{
     width: 300px;
     height: 100px;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
     border-radius: 20px;
     background-color: $primary;
-    position: absolute;
+    position: fixed;
     top: calc(50% - 50px);
     left: calc(50% - 150px);
     z-index: 50;
@@ -27,4 +27,8 @@
             color: $secondary;
         }
     }
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.421);
 }

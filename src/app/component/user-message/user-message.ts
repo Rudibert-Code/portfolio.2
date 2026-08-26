@@ -12,7 +12,7 @@ import { Component, Injectable, HostListener } from '@angular/core';
 export class UserMessage {
 
   togglePopup(){
-    let targetElement = document.getElementById('user-message') as HTMLDivElement;
+    let targetElement = document.getElementById('user-message') as HTMLDialogElement;
     if (targetElement.style.display == "flex") {
       targetElement.style.display = "none";
     } else{
@@ -23,7 +23,7 @@ export class UserMessage {
 
   @HostListener('document:click', ['$event'])
     outsideClick(event: MouseEvent){  
-    const popup = document.getElementById('user-message') as HTMLDivElement;
+    const popup = document.getElementById('user-message') as HTMLDialogElement;
     const clickedElement = event.target as HTMLElement;
 
     if (clickedElement != popup && !popup.contains(clickedElement)) {
