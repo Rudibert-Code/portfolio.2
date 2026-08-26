@@ -2,6 +2,10 @@
 @use '../../../styles/typography';
 @use '../../../styles/basic';
 
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.421);
+}
+
 .user-message{
     width: 300px;
     height: 100px;
@@ -12,9 +16,8 @@
     border-radius: 20px;
     background-color: $primary;
     position: fixed;
-    top: calc(50% - 50px);
-    left: calc(50% - 150px);
     z-index: 50;
+
 
     >p{
         color: $overlay;
@@ -27,8 +30,4 @@
             color: $secondary;
         }
     }
-}
-
-dialog::backdrop{
-    background-color: rgba(0, 0, 0, 0.421);
 }

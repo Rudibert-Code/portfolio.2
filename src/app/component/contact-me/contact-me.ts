@@ -209,9 +209,9 @@ export class ContactMe {
       return;
     }
 
-    console.log("message send");
     //alert('Message sent successfully!');
-    this.popup.togglePopup();
+    this.popup.controlPopup('open');
+
   } catch (error) {
     console.error('Request failed:', error);
     alert('Network error. Please try again.');
