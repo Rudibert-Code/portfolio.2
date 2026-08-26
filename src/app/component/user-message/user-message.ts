@@ -15,8 +15,10 @@ export class UserMessage {
     const targetElement = document.getElementById('user-message') as HTMLDialogElement;
     if (X === 'open') {
       targetElement.showModal();
-    } else if(X === 'close'){
+      targetElement.style.display="flex";
+    } else if(X === 'close' && targetElement.open){
       targetElement.close();
+      targetElement.style.display="none";
     } else{
       return
     }

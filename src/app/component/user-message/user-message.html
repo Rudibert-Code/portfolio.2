@@ -1,4 +1,4 @@
 <dialog class="user-message" id="user-message">
     <p>Email send!</p>
-    <a (click)="controlPopup('close')">OK</a>
+    <a (click)="$event.stopPropagation(); controlPopup('close')">OK</a>
 </dialog>
