@@ -1,5 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, Injectable, HostListener } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-user-message',
   imports: [],
@@ -8,9 +11,14 @@ import { Component, HostListener } from '@angular/core';
 })
 export class UserMessage {
 
-  closePopup(){
+  togglePopup(){
     let targetElement = document.getElementById('user-message') as HTMLDivElement;
-    targetElement.style.display = "none";
+    if (targetElement.style.display == "flex") {
+      targetElement.style.display = "none";
+    } else{
+      targetElement.style.display = "flex"
+    }
+    
   }
 
   @HostListener('document:click', ['$event'])
@@ -19,7 +27,7 @@ export class UserMessage {
     const clickedElement = event.target as HTMLElement;
 
     if (clickedElement != popup && !popup.contains(clickedElement)) {
-      return this.closePopup()
+      return this.togglePopup()
     } else{
       return
     }

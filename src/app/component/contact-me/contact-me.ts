@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { UserMessage } from "../user-message/user-message";
 import Language from "../../shared/language/languages.json";
 
 interface User{
@@ -16,6 +17,8 @@ interface User{
   styleUrl: './contact-me.scss',
 })
 export class ContactMe {
+  popup = inject(UserMessage);
+
   newUser:User[]=[
     {
       name:"",
@@ -207,7 +210,8 @@ export class ContactMe {
     }
 
     console.log("message send");
-    alert('Message sent successfully!');
+    //alert('Message sent successfully!');
+    this.popup.togglePopup();
   } catch (error) {
     console.error('Request failed:', error);
     alert('Network error. Please try again.');
