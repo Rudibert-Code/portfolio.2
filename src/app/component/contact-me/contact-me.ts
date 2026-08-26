@@ -167,6 +167,16 @@ export class ContactMe {
     this.checkFormCompletion();
   }
 
+  clearInput(){
+    let inputName = document.getElementById('input-name') as HTMLInputElement;
+    let inputEmail = document.getElementById('input-email') as HTMLInputElement;
+    let inputMessage = document.getElementById('input-text') as HTMLTextAreaElement;
+
+    inputName.value ="";
+    inputEmail.value ="";
+    inputMessage. value = "";
+  }
+
   checkbox(state:string){
     let checkbox = document.getElementById('checkbox') as HTMLDivElement;
     checkbox.classList.toggle("checkbox");
@@ -216,6 +226,8 @@ export class ContactMe {
     console.error('Request failed:', error);
     alert('Network error. Please try again.');
   }
+
+  this.clearInput();
 }
 }
 

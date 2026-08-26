@@ -67,7 +67,8 @@
             "@  . und eine Domain-Endung sind erforderlich",
             "Hinterlassen Sie eine Nachricht",
             "Die Nachricht konnte nicht gesendet werden",
-            "Die Nachricht wurde erfolgreich gesendet!"
+            "Die Nachricht wurde erfolgreich gesendet!",
+            "Schließen"
         ],
         "footer":"Rechtliche Hinweise",
         "legalnotice":[
@@ -167,7 +168,8 @@
             "@  .  and a domain extension are required",
             "Your message is required",
             "Message could not be sent",
-            "Message sent successfully!"
+            "Message sent successfully!",
+            "Close"
         ],
         "footer":"Legal Notice",
         "legalnotice":[
