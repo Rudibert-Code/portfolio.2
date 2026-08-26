@@ -7,10 +7,11 @@ import { MyProjects } from '../../component/my-projects/my-projects';
 import { Recommendation } from "../../component/recommendation/recommendation";
 import { ContactMe } from "../../component/contact-me/contact-me";
 import { Footer } from "../../component/footer/footer";
+import { UserMessage } from "../../component/user-message/user-message";
 
 @Component({
   selector: 'app-main',
-  imports: [Header, NavBar, WhyMe, MySkills, MyProjects, Recommendation, ContactMe, Footer],
+  imports: [Header, NavBar, WhyMe, MySkills, MyProjects, Recommendation, ContactMe, Footer, UserMessage],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })

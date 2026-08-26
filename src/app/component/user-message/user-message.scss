@@ -1,0 +1,30 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography';
+@use '../../../styles/basic';
+
+.user-message{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $primary;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 150px);
+    z-index: 50;
+
+    >p{
+        color: $overlay;
+        padding-bottom: 16px;
+    }
+
+    >a{
+        color: $overlay;
+        &:hover{
+            color: $secondary;
+        }
+    }
+}
