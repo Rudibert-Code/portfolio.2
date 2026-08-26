@@ -27,9 +27,9 @@ export class UserMessage {
   @HostListener('document:click', ['$event'])
     outsideClick(event: MouseEvent){  
     const popup = document.getElementById('user-message') as HTMLDialogElement;
-    const clickedElement = event.target as HTMLElement;
 
-    if (clickedElement != popup && !popup.contains(clickedElement)) {
+    if (popup.open) {
+      console.log("YES")
       return this.controlPopup('close')
     } else{
       return
