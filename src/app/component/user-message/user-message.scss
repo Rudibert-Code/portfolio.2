@@ -17,7 +17,7 @@ dialog::backdrop{
     background-color: $primary;
     position: fixed;
     z-index: 50;
-
+    text-align: center;
 
     >p{
         color: $overlay;

@@ -214,17 +214,15 @@ export class ContactMe {
 
     if (!response.ok || !data.success) {
       console.error('Mail error:', data);
-      console.log("message NOT send");
-      //alert('Message could not be sent.');
+      this.popup.controlPopup('open');
       return;
     }
 
-    //alert('Message sent successfully!');
     this.popup.controlPopup('open');
 
   } catch (error) {
     console.error('Request failed:', error);
-    alert('Network error. Please try again.');
+    this.popup.controlPopup('open');
   }
 
   this.clearInput();
